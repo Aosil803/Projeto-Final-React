@@ -1,0 +1,32 @@
+.mainContainer{
+  max-width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: black;
+}
+
+.opening{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #E8E8E8;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.opening.hidden {
+  opacity: 0;
+}
+
+.backGroundVideo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
