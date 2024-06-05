@@ -1,0 +1,25 @@
+.entrada {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.portaEntrada{
+  position: absolute;
+  top: 27%;
+  right: 34%;
+  z-index: 1;
+  width: 93px;
+  height: 193px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.6 ease-in-out;
+}
+
+.mainPage:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition: 0.6 ease-in-out;
+}

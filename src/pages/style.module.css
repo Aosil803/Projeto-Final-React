@@ -1,4 +1,5 @@
 .mainContainer{
+  display: flex;
   max-width: 100vw;
   height: 100vh;
   z-index: -1;
@@ -26,7 +27,42 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
+  object-fit: cover;
   z-index: 0;
 }
+
+.navBarMenu{
+  position: absolute;
+  display: flex;
+  left: 5%;
+  top: 15%;
+  flex-direction: column;
+  background: transparent;
+  color: white;
+  z-index: 1;
+  font-family: "Honk", system-ui;
+  font-size: xx-large;
+  list-style-type: none;
+  height: 500px;
+  justify-content: center;
+}
+
+.navBarMenu li{
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.navBarMenu ul {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.navBarMenu a {
+  font-size: larger;
+}
+
+
+
