@@ -35,10 +35,10 @@ export const QuartoBonas = () => {
       openPopupLapTop &&
     <div className={style.lapTopPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Notebook novo</h2>
         <button onClick={()=> setOpenPopupLapTop(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Ele não está ligando.</p>
     </div>
     }
 
@@ -46,10 +46,10 @@ export const QuartoBonas = () => {
       openPopupLivro &&
     <div className={style.livroPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Diário Pessoal</h2>
         <button onClick={()=> setOpenPopupLivro(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}> "Que ódio que me dá quando isso acontece!"..."Será que foi necessário?"</p>
     </div>
     }
 
@@ -57,10 +57,10 @@ export const QuartoBonas = () => {
       openPopupCanivete &&
     <div className={style.canivetePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Canivete</h2>
         <button onClick={()=> setOpenPopupCanivete(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Um canivete aparentemente novo, poucas marcas de uso. Parece ter uma linha</p>
     </div>
     }
 
