@@ -2,11 +2,38 @@ import { useEffect } from 'react'
 import { useNavigate} from 'react-router-dom';
 import style from './style.module.css'
 import opening from '../assets/republicaLogo.mp4'
-import backGround from '../assets/republica.mp4'
+import backGround from '../assets/republica.mp4' 
+import axios from "axios"
+import { getConselhoById } from '../service';
 
 function App() {
-  
   const navigate = useNavigate();
+  const usuario = {
+    email: "bonafe",
+    senha: "lc"
+  };
+  
+  useEffect(() =>{
+    getConselhoById().
+      then((response) => 
+        console.log(response)).
+      catch((error) => 
+        console.log(error));  
+  }, []);
+
+  useEffect(() => {
+    axios.post('https://6660c1015425580055b52043.mockapi.io/api/usuarios', usuario, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
 
   useEffect(() => {
