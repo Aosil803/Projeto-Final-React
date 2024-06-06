@@ -15,6 +15,7 @@ export const PortaCrime = () => {
   return <div>
       <img className={style.crime} src={crime} alt="cena do crime" />
       <button className={style.home} onClick={Home}></button>
+      <p className={style.tituloLocal}>Cena do Crime</p>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />

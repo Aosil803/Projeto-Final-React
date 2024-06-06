@@ -15,6 +15,7 @@ export const QuartoYuka = () => {
     <div>
     <img className={style.quarto03} src={quarto03} alt="Quarto da yuka" />
     </div>
+    <p className={style.tituloLocal}>Quarto Yuka</p>
     <button className={style.caixa}></button>
     <button className={style.gato}></button>
     <button className={style.sangue}></button>

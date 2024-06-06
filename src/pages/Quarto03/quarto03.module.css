@@ -4,6 +4,7 @@
   left: 0;
   height: 100%;
   width: 100%;
+  animation: fadeInBackground 1s ease-in-out;
 }
 .caixa{
   position: absolute;
@@ -56,6 +57,16 @@
   transition:  0.8s ease-in-out;
 }
 
+.tituloLocal{
+  position: absolute;
+  top: 2%;
+  left: 3%;
+  transform: rotate(-15deg);
+  font-size: x-large;
+  font-family: "Honk", system-ui;
+}
+
+
 .containerIcon{
   position: absolute;
   background: transparent;
@@ -66,3 +77,9 @@
 .homeIcon{
   width: 55%;
 }
+
+@keyframes fadeInBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

@@ -4,6 +4,7 @@
   left: 0;
   height: 100%;
   width: 100%;
+  animation: fadeInBackground 10s ease-in-out;
 }
 
 .portaEntrada{
@@ -22,4 +23,9 @@
 .portaEntrada:hover {
   box-shadow: 1px 1px 5px 5px white;
   transition:  0.8s ease-in-out;
+}
+
+@keyframes fadeInBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

@@ -34,6 +34,7 @@ export const Corredor = () => {
         <div>
         <img className={style.corredor} src={corredor} alt="corredor de uma casa" />
         </div>
+        <p className={style.tituloLocal}>Corredor</p>
         <button className={style.portaCrime} onClick={PortaCrime}></button>
         <button className={style.portaBonas} onClick={PortaBonas}></button>
         <button className={style.portaAlex} onClick={PortaAlex}></button>
