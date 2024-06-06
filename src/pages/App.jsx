@@ -1,40 +1,34 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate} from 'react-router-dom';
 import style from './style.module.css'
 import opening from '../assets/republicaLogo.mp4'
 import backGround from '../assets/republica.mp4' 
-import axios from "axios"
 import { getConselhoById } from '../service';
+import { postUser } from '../service/usePost';
 
 function App() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
   const navigate = useNavigate();
-  const usuario = {
-    email: "bonafe",
-    senha: "lc"
-  };
-  
-  useEffect(() =>{
+
+  const handleSubmit = (e) => { 
+    e.preventDefault();
+    const usuario = {
+      email: email,
+      senha: senha
+      
+    };
+
+    postUser(usuario);
+  }
+
+  useEffect(() =>{ // ver se é necessário tirar then e catch
     getConselhoById().
       then((response) => 
         console.log(response)).
       catch((error) => 
         console.log(error));  
-  }, []);
-
-  useEffect(() => {
-    axios.post('https://6660c1015425580055b52043.mockapi.io/api/usuarios', usuario, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
+  }, []);// implementar no pop up
 
   useEffect(() => {
     const introductionVideo = document.querySelector('.' + style.opening);
@@ -68,6 +62,25 @@ function App() {
             <li><a href="#">Quem somos</a></li>
             <li><a href="#">Contato</a></li>
           </ul>
+            <form onSubmit={handleSubmit}>
+            <div>
+              <label>Email:</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div>
+              <label>Senha:</label>
+              <input
+                type="password"
+                value={senha}
+                onChange={(e) => setSenha(e.target.value)}
+              />
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
         </nav>
       </div>
     </>
