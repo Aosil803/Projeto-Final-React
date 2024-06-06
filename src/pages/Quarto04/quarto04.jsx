@@ -34,10 +34,10 @@ export const QuartoLorencini = () => {
       openPopupComputador &&
     <div className={style.computadorPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Computador Ligado</h2>
         <button onClick={()=> setOpenPopupComputador(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Está aberto em um jogo.</p>
     </div>
     }
 
@@ -45,10 +45,10 @@ export const QuartoLorencini = () => {
       openPopupBalde &&
     <div className={style.baldePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Material de Limpeza</h2>
         <button onClick={()=> setOpenPopupBalde(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Sabão em pó, água sanitária e desifetante. Estão usados.</p>
     </div>
     }
 
@@ -56,10 +56,10 @@ export const QuartoLorencini = () => {
       openPopupDever &&
     <div className={style.deverPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Dever de casa</h2>
         <button onClick={()=> setOpenPopupDever(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Todos eles estão com o nome do Fred, nota 100!</p>
     </div>
     }
 
