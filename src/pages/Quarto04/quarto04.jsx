@@ -1,12 +1,15 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import quarto04 from "../../assets/quartoLorencini.png"
 import style from "./quarto04.module.css"
 import home from "../../assets/home.gif"
 
-
 export const QuartoLorencini = () => {
 
   const navigate = useNavigate();
+  const [openPopupComputador ,setOpenPopupComputador] = useState(false)
+  const [openPopupBalde ,setOpenPopupBalde] = useState(false)
+  const [openPopupDever ,setOpenPopupDever] = useState(false)
 
   function Home() {
     navigate('../corredor');
@@ -23,8 +26,42 @@ export const QuartoLorencini = () => {
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-    <button className={style.balde}></button>
-    <button className={style.computador}></button>
-    <button className={style.dever}></button>
+    <button className={style.balde} onClick={() => setOpenPopupBalde(!openPopupBalde)}></button>
+    <button className={style.computador} onClick={() => setOpenPopupComputador(!openPopupComputador)}></button>
+    <button className={style.dever} onClick={() => setOpenPopupDever(!openPopupDever)}></button>
+
+    {
+      openPopupComputador &&
+    <div className={style.computadorPopUp}>
+      <div className={style.caixaPopUpInterna}>
+        <h2>PopUp</h2>
+        <button onClick={()=> setOpenPopupComputador(false)}>X</button>
+      </div>
+      <p className={style.textoPopUp}>Caixa PopUp </p>
+    </div>
+    }
+
+    {
+      openPopupBalde &&
+    <div className={style.baldePopUp}>
+      <div className={style.caixaPopUpInterna}>
+        <h2>PopUp</h2>
+        <button onClick={()=> setOpenPopupBalde(false)}>X</button>
+      </div>
+      <p className={style.textoPopUp}>Caixa PopUp </p>
+    </div>
+    }
+
+{
+      openPopupDever &&
+    <div className={style.deverPopUp}>
+      <div className={style.caixaPopUpInterna}>
+        <h2>PopUp</h2>
+        <button onClick={()=> setOpenPopupDever(false)}>X</button>
+      </div>
+      <p className={style.textoPopUp}>Caixa PopUp </p>
+    </div>
+    }
+
   </div>
 };
