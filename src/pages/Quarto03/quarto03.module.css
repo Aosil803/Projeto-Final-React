@@ -55,3 +55,14 @@
   box-shadow: 1px 1px 5px 5px white;
   transition:  0.8s ease-in-out;
 }
+
+.containerIcon{
+  position: absolute;
+  background: transparent;
+  bottom: 0;
+  left: 45%;
+}
+
+.homeIcon{
+  width: 55%;
+}
