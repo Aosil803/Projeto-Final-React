@@ -26,6 +26,7 @@
   font-size: x-large;
   font-family: "Honk", system-ui;
 }
+
 .ferida{
   position: absolute;
   bottom: 30%;
@@ -41,7 +42,8 @@
 
 .ferida:hover {
   box-shadow: 1px 1px 5px 5px white;
-  transition:  0.8s ease-in-out;}
+  transition:  0.8s ease-in-out;
+}
 
 .porteira{
   position: absolute;
@@ -58,7 +60,37 @@
 
 .porteira:hover {
   box-shadow: 1px 1px 5px 5px white;
-  transition:  0.8s ease-in-out;}
+  transition:  0.8s ease-in-out;
+}
+
+.portaPopUp{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border: 2px solid #e4760f;
+  animation: fadeInBackground 0.4s ease-in-out;
+  color: white;
+  padding: 1%;
+}
+
+.feridaPopUp{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border: 2px solid #e4760f;
+  animation: fadeInBackground 0.4s ease-in-out;
+  color: white;
+  padding: 1%;
+}
+
+
+
 
 @keyframes fadeInBackground {
     from { opacity: 0; }
