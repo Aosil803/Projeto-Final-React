@@ -11,8 +11,8 @@
   position: absolute;
   top: 34%;
   left: 41%;
-  width: 241px;
-  height: 365px;
+  width: 177px;
+  height: 280px;
   background: transparent;
   border: none;
   z-index: 2;
@@ -27,10 +27,10 @@
 
 .portaBonas{
   position: absolute;
-  top: 0%;
+  top: 1%;
   left: 15%;
-  width: 150px;
-  height: 797px;
+  width: 100px;
+  height: 590px;
   background-color:transparent;
   border: none;
   transition:  0.8s ease-in-out;
@@ -44,8 +44,8 @@
 
 .portaAlex{
   position: absolute;
-  width: 70px;
-  height: 580px;
+  width: 55px;
+  height: 430px;
   background-color:transparent;
   border: none;
   left: 26%;
@@ -61,10 +61,10 @@
 
 .portaYuka{
   position: absolute;
-  top: 0;
+  top: 1%;
   right: 9%;
-  width: 180px;
-  height: 796px;
+  width: 130px;
+  height: 590px;
   transition:  0.8s ease-in-out;
   background-color:transparent;
   border: none;
@@ -80,8 +80,8 @@
   position: absolute;
   top: 16%;
   right: 24%;
-  width: 100px;
-  height: 620px;
+  width: 70px;
+  height: 470px;
   transition:  0.8s ease-in-out;
   background-color:transparent;
   border: none;
@@ -96,9 +96,9 @@
 .portaLorencini{
   position: absolute;
   top: 27%;
-  right: 33%;
-  width: 33px;
-  height: 450px;
+  right: 32%;
+  width: 36px;
+  height: 350px;
   background-color:transparent;
   border: none;
   cursor: pointer;

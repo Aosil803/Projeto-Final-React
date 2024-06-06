@@ -5,6 +5,8 @@ import { Corredor } from './src/pages/Corredor/corredor.jsx'
 import { QuartoYuka } from './src/pages/Quarto03/quarto03.jsx'
 import { QuartoBonas } from './src/pages/Quarto02/quarto02.jsx';
 import { Entrada } from './src/pages/Entrada/entrada.jsx';
+import { PortaCrime } from './src/pages/Crime/crime.jsx';
+import { QuartoAlex } from './src/pages/Quarto01/quarto01.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -27,12 +29,20 @@ const router = createBrowserRouter([
     element: <Corredor />
   },
   {
-    path: '/quartoyuka',
+    path: '/quartoYuka',
     element: <QuartoYuka />
   },
   {
-    path: '/quartobonas',
+    path: '/quartoBonas',
     element: <QuartoBonas />
+  },
+  {
+    path: '/crime',
+    element: <PortaCrime />
+  },
+  {
+    path: '/quartoAlex',
+    element: <QuartoAlex />
   }
 ]);
 

@@ -2,7 +2,7 @@ import crime from "../../assets/cenaDoCrime.png"
 import style from "./crime.module.css"
 
 
-export const Entrada = () => {
+export const PortaCrime = () => {
 
 
   return <div>

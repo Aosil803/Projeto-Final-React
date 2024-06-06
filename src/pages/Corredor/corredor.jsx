@@ -14,10 +14,10 @@ export const Corredor = () => {
     navigate('../portaBonas');
   }
   function PortaAlex() {
-    navigate('../portaAlex');
+    navigate('../quartoAlex');
   }
   function PortaYuka() {
-    navigate('../portaYuka');
+    navigate('../quartoYuka');
   }
   function PortaMiguelito() {
     navigate('../portaMiguelito');
