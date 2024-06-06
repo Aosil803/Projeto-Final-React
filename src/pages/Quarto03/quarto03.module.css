@@ -78,6 +78,46 @@
   width: 55%;
 }
 
+.caixaPopUp{
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border: 2px solid #e4760f;
+  animation: fadeInBackground 0.4s ease-in-out;
+  color: white;
+  padding: 1%;
+}
+
+.gatoPopUp{
+  position: absolute;
+  top: 51%;
+  right: 29%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border: 2px solid #e4760f;
+  animation: fadeInBackground 0.4s ease-in-out;
+  color: white;
+  padding: 1%;
+}
+
+.sanguePopUp{
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border: 2px solid #e4760f;
+  animation: fadeInBackground 0.4s ease-in-out;
+  color: white;
+  padding: 1%;
+}
+
+
 @keyframes fadeInBackground {
   from { opacity: 0; }
   to { opacity: 1; }
