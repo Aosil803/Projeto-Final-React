@@ -11,8 +11,8 @@
   position: absolute;
   top: 34%;
   left: 41%;
-  width: 177px;
-  height: 280px;
+  width: 13%;
+  height: 46%;
   background: transparent;
   border: none;
   z-index: 2;
@@ -29,9 +29,9 @@
   position: absolute;
   top: 1%;
   left: 15%;
-  width: 100px;
-  height: 590px;
-  background-color:transparent;
+  width: 7%;
+  height: 98%;
+  background:transparent;
   border: none;
   transition:  0.8s ease-in-out;
   cursor: pointer;
@@ -44,8 +44,8 @@
 
 .portaAlex{
   position: absolute;
-  width: 55px;
-  height: 430px;
+  width: 4%;
+  height: 72%;
   background-color:transparent;
   border: none;
   left: 26%;
@@ -63,8 +63,8 @@
   position: absolute;
   top: 1%;
   right: 9%;
-  width: 130px;
-  height: 590px;
+  width: 9%;
+  height: 98%;
   transition:  0.8s ease-in-out;
   background-color:transparent;
   border: none;
@@ -80,8 +80,8 @@
   position: absolute;
   top: 16%;
   right: 24%;
-  width: 70px;
-  height: 470px;
+  width: 4%;
+  height: 77%;
   transition:  0.8s ease-in-out;
   background-color:transparent;
   border: none;
@@ -97,8 +97,8 @@
   position: absolute;
   top: 27%;
   right: 32%;
-  width: 36px;
-  height: 350px;
+  width: 3%;
+  height: 57%;
   background-color:transparent;
   border: none;
   cursor: pointer;
