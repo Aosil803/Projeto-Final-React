@@ -27,11 +27,6 @@
   font-family: "Honk", system-ui;
 }
 
-@keyframes fadeInBackground {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 .brilho{
   position: absolute;
   bottom: 46%;
@@ -65,19 +60,67 @@
   box-shadow: 1px 1px 5px 5px white;
   transition:  0.8s ease-in-out;}
 
-  .monitor{
-    position: absolute;
-    bottom: 23%;
-    right: 1.8%;
-    z-index: 1;
-    width: 15%;
-    height: 26%;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition:  0.8s ease-in-out;
-  }
-  .monitor:hover {
-    box-shadow: 1px 1px 5px 5px white;
-    transition:  0.8s ease-in-out;}
+.monitor{
+  position: absolute;
+  bottom: 25.5%;
+  right: 1.8%;
+  z-index: 1;
+  width: 15%;
+  height: 22%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+  transform: skewY(7deg);
+}
+
+.monitor:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;
+}
+
+.sanguePopUp{
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border: 2px solid #e4760f;
+  animation: fadeInBackground 0.4s ease-in-out;
+  color: white;
+  padding: 1%;
+}
+
+.evidenciaPopUp{
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border: 2px solid #e4760f;
+  animation: fadeInBackground 0.4s ease-in-out;
+  color: white;
+  padding: 1%;
+}
+
+.computadorPopUp{
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  border: 2px solid #e4760f;
+  animation: fadeInBackground 0.4s ease-in-out;
+  color: white;
+  padding: 1%;
+}
+
+
+@keyframes fadeInBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
