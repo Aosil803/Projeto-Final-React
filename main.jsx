@@ -7,6 +7,8 @@ import { QuartoBonas } from './src/pages/Quarto02/quarto02.jsx';
 import { Entrada } from './src/pages/Entrada/entrada.jsx';
 import { PortaCrime } from './src/pages/Crime/crime.jsx';
 import { QuartoAlex } from './src/pages/Quarto01/quarto01.jsx';
+import { QuartoMiguelito } from './src/pages/Quarto05/quarto05.jsx';
+import { QuartoLorencini } from './src/pages/Quarto04/quarto04.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
   {
     path: '/quartoAlex',
     element: <QuartoAlex />
+  },
+  {
+    path: '/quartoMiguelito',
+    element: <QuartoMiguelito />
+  },
+  {
+    path: '/quartoLorencini',
+    element: <QuartoLorencini />
   }
 ]);
 

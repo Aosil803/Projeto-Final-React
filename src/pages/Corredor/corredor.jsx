@@ -11,7 +11,7 @@ export const Corredor = () => {
     navigate('../crime');
   }
   function PortaBonas() {
-    navigate('../portaBonas');
+    navigate('../quartoBonas');
   }
   function PortaAlex() {
     navigate('../quartoAlex');
@@ -20,10 +20,10 @@ export const Corredor = () => {
     navigate('../quartoYuka');
   }
   function PortaMiguelito() {
-    navigate('../portaMiguelito');
+    navigate('../quartoMiguelito');
   }
   function PortaLorencini() {
-    navigate('../portaLorencini');
+    navigate('../quartoLorencini');
   }
   function Home() {
     navigate('../home');
