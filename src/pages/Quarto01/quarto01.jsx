@@ -34,10 +34,10 @@ export const QuartoAlex = () => {
       openPopupCofre &&
     <div className={style.cofrePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Caixa de Madeira</h2>
         <button onClick={()=> setOpenPopupCofre(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Dentro dela você encontra MUITO dinheiro.</p>
     </div>
     }
 
@@ -45,10 +45,10 @@ export const QuartoAlex = () => {
       openPopupGaveta &&
     <div className={style.gavetaPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Gaveta</h2>
         <button onClick={()=> setOpenPopupGaveta(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Há uma Intimação Judicial dentro dela.</p>
     </div>
     }
 
@@ -56,10 +56,10 @@ export const QuartoAlex = () => {
       openPopupChave &&
     <div className={style.chavePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Chaves</h2>
         <button onClick={()=> setOpenPopupChave(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Uma chave um pouco antiga. Há uma etiqueta nela escrito "Depósito Jadim dos Fundos" </p>
     </div>
     }
 
