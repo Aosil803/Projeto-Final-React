@@ -7,16 +7,15 @@
 }
 .caixa{
   position: absolute;
-  bottom: 10%;
-  left: 6.1%;
+  bottom: 9%;
+  left: 6.3%;
   z-index: 1;
-  width: 8%;
-  height: 14%;
+  width: 10%;
+  height: 17%;
   background: transparent;
   border: none;
   cursor: pointer;
   transition:  0.8s ease-in-out;
-  box-shadow: 1px 1px 5px 5px white;
 }
 
 .caixa:hover {
@@ -25,16 +24,15 @@
 
 .gato{
   position: absolute;
-  bottom: 15%;
-  right: 26.4%;
+  bottom: 14%;
+  right: 26.6%;
   z-index: 1;
-  width: 5.2%;
+  width: 5.5%;
   height: 20%;
   background: transparent;
   border: none;
   cursor: pointer;
   transition:  0.8s ease-in-out;
-  box-shadow: 1px 1px 5px 5px white;
 }
 .gato:hover {
   box-shadow: 1px 1px 5px 5px white;
@@ -45,8 +43,8 @@
   bottom: 35.3%;
   right: 22.1%;
   z-index: 1;
-  width: 52px;
-  height: 40px;
+  width: 3.4%;
+  height: 4%;
   background: transparent;
   border: none;
   cursor: pointer;
