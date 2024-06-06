@@ -27,9 +27,57 @@
   font-family: "Honk", system-ui;
 }
 
-
 @keyframes fadeInBackground {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.brilho{
+  position: absolute;
+  bottom: 46%;
+  left: 44%;
+  z-index: 1;
+  width: 1.6%;
+  height: 3%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+
+.brilho:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;}
+
+.sangue{
+  position: absolute;
+  bottom: 18.7%;
+  left: 1.6%;
+  z-index: 1;
+  width: 4.5%;
+  height: 8.5%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+.sangue:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;}
+
+  .monitor{
+    position: absolute;
+    bottom: 23%;
+    right: 1.8%;
+    z-index: 1;
+    width: 15%;
+    height: 26%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition:  0.8s ease-in-out;
+  }
+  .monitor:hover {
+    box-shadow: 1px 1px 5px 5px white;
+    transition:  0.8s ease-in-out;}
 

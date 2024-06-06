@@ -4,6 +4,7 @@
   left: 0;
   height: 100%;
   width: 100%;
+
   animation: fadeInBackground 1s ease-in-out;
 }
 
@@ -32,3 +33,53 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+.notebook{
+  position: absolute;
+  bottom: 58%;
+  left: 14.3%;
+  z-index: 1;
+  width: 9%;
+  height: 12%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+
+.notebook:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;}
+
+.canivete{
+  position: absolute;
+  bottom: 7%;
+  right: 9%;
+  z-index: 1;
+  width: 5%;
+  height: 4.6%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+
+.canivete:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;}
+
+.diario{
+  position: absolute;
+  bottom: 3%;
+  left: 0%;
+  z-index: 1;
+  width: 23.5%;
+  height: 20.3%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+
+.diario:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;}

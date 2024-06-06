@@ -13,7 +13,9 @@ export const QuartoLorencini = () => {
   }
 
   return <div>
-      <img className={style.quarto04} src={quarto04} alt="frente de uma casa" />
+      <div>
+        <img className={style.quarto04} src={quarto04} alt="Quarto do Lorencini" />
+      </div>
       <button className={style.home} onClick={Home}></button>
       <p className={style.tituloLocal}>Quarto Lorencini</p>
         <div className={style.containerIcon}>
@@ -21,6 +23,8 @@ export const QuartoLorencini = () => {
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-
+    <button className={style.balde}></button>
+    <button className={style.computador}></button>
+    <button className={style.dever}></button>
   </div>
 };

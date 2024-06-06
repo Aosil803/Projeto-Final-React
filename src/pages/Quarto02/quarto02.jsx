@@ -14,7 +14,9 @@ export const QuartoBonas = () => {
 
 
   return <div>
-      <img className={style.quarto02} src={quarto02} alt="Quarto do Bonas" />
+      <div>
+        <img className={style.quarto02} src={quarto02} alt="Quarto do Bonas" />
+      </div>
       <p className={style.tituloLocal}>Quarto Bonas</p>
       <button className={style.home} onClick={Home}></button>
         <div className={style.containerIcon}>
@@ -22,6 +24,8 @@ export const QuartoBonas = () => {
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-
+      <button className={style.notebook}></button>
+      <button className={style.diario}></button>
+      <button className={style.canivete}></button>
   </div>
 };

@@ -32,3 +32,54 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.balde{
+  position: absolute;
+  bottom: 33.2%;
+  right: 40.8%;
+  z-index: 1;
+  width: 8.5%;
+  height: 18.7%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+
+.balde:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;}
+
+.computador{
+  position: absolute;
+  top: 29%;
+  left: 25.4%;
+  z-index: 1;
+  width: 9.6%;
+  height: 13%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+
+.computador:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;}
+
+  .dever{
+    position: absolute;
+    bottom: 45%;
+    right: 0%;
+    z-index: 1;
+    width: 8.4%;
+    height: 7%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition:  0.8s ease-in-out;
+  }
+
+  .dever:hover {
+    box-shadow: 1px 1px 5px 5px white;
+    transition:  0.8s ease-in-out;}

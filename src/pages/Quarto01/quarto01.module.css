@@ -32,3 +32,54 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.caixaArmario{
+  position: absolute;
+  bottom: 39.7%;
+  left: 29.1%;
+  z-index: 1;
+  width: 2.2%;
+  height: 6.3%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+
+.caixaArmario:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;}
+
+  .gaveta{
+    position: absolute;
+    bottom: 47.5%;
+    right: 25.7%;
+    z-index: 1;
+    width: 10.3%;
+    height: 3.7%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition:  0.8s ease-in-out;
+  }
+
+  .gaveta:hover {
+    box-shadow: 1px 1px 5px 5px white;
+    transition:  0.8s ease-in-out;}
+
+  .chave{
+    position: absolute;
+    bottom: 60.4%;
+    right: 14%;
+    z-index: 1;
+    width: 1.7%;
+    height: 6.2%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition:  0.8s ease-in-out;
+  }
+
+  .chave:hover {
+    box-shadow: 1px 1px 5px 5px white;
+    transition:  0.8s ease-in-out;}

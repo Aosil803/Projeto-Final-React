@@ -12,14 +12,16 @@ export const QuartoMiguelito = () => {
   }
 
   return <div>
-      <img className={style.quarto05} src={quarto05} alt="frente de uma casa" />
-      <button className={style.home} onClick={Home}></button>
+    <img className={style.quarto05} src={quarto05} alt="Quarto do Miguelito" />
+    <button className={style.home} onClick={Home}></button>
       <p className={style.tituloLocal}>Quarto Miguelito</p>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-
+    <button className={style.brilho}></button>
+    <button className={style.monitor}></button>
+    <button className={style.sangue}></button>
   </div>
 };

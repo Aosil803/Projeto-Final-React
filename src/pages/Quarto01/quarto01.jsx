@@ -13,7 +13,9 @@ export const QuartoAlex = () => {
 
 
   return <div>
-      <img className={style.quarto01} src={quarto01} alt="Quarto do Alex" />
+      <div>
+        <img className={style.quarto01} src={quarto01} alt="Quarto do Alex" />
+      </div>
       <p className={style.tituloLocal}>Quarto Alex</p>
       <button className={style.home} onClick={Home}></button>
         <div className={style.containerIcon}>
@@ -21,6 +23,8 @@ export const QuartoAlex = () => {
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-
+    <button className={style.caixaArmario}></button>
+    <button className={style.gaveta}></button>
+    <button className={style.chave}></button>
   </div>
 };
