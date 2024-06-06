@@ -38,7 +38,7 @@ export const QuartoBonas = () => {
         <h2>Notebook novo</h2>
         <button onClick={()=> setOpenPopupLapTop(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Ele não está ligando.</p>
+      <p className={style.textoPopUp}>Não está ligando. Ao pegar ele saiu água do teclado.</p>
     </div>
     }
 
@@ -60,7 +60,7 @@ export const QuartoBonas = () => {
         <h2>Canivete</h2>
         <button onClick={()=> setOpenPopupCanivete(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Um canivete aparentemente novo, poucas marcas de uso. Parece ter uma linha</p>
+      <p className={style.textoPopUp}>Um canivete aparentemente novo, poucas marcas de uso. Parece ter uma linha presa na lâmina.</p>
     </div>
     }
 

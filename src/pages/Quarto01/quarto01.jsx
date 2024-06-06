@@ -34,10 +34,10 @@ export const QuartoAlex = () => {
       openPopupCofre &&
     <div className={style.cofrePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Caixa de Madeira</h2>
+        <h2>Cofre de Madeira</h2>
         <button onClick={()=> setOpenPopupCofre(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Dentro dela você encontra MUITO dinheiro.</p>
+      <p className={style.textoPopUp}>Dentro dele você encontra MUITO dinheiro.</p>
     </div>
     }
 

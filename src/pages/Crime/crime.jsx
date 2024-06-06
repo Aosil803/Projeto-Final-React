@@ -29,10 +29,10 @@ export const PortaCrime = () => {
       openPopupPorta &&
     <div className={style.portaPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Porteira Velha</h2>
         <button onClick={()=> setOpenPopupPorta(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Atras dela há uma porta trancada.</p>
     </div>
     }
 
@@ -40,10 +40,10 @@ export const PortaCrime = () => {
       openPopupFerida &&
     <div className={style.feridaPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Ferimento da Vítma</h2>
         <button onClick={()=> setOpenPopupFerida(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Que horrível! Parece ser um corte, e tem terra em volta dele.</p>
     </div>
     }
 
