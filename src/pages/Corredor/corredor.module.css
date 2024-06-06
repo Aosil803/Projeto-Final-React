@@ -4,4 +4,108 @@
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: 0;
+}
+
+.portaCrime{
+  position: absolute;
+  top: 34%;
+  left: 41%;
+  width: 241px;
+  height: 365px;
+  background: transparent;
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+
+.portaCrime:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;
+}
+
+.portaBonas{
+  position: absolute;
+  top: 0%;
+  left: 15%;
+  width: 150px;
+  height: 797px;
+  background-color:transparent;
+  border: none;
+  transition:  0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.portaBonas:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;
+}
+
+.portaAlex{
+  position: absolute;
+  width: 70px;
+  height: 580px;
+  background-color:transparent;
+  border: none;
+  left: 26%;
+  top: 19%;
+  transition:  0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.portaAlex:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;
+}
+
+.portaYuka{
+  position: absolute;
+  top: 0;
+  right: 9%;
+  width: 180px;
+  height: 796px;
+  transition:  0.8s ease-in-out;
+  background-color:transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.portaYuka:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;
+}
+
+.portaMiguelito{
+  position: absolute;
+  top: 16%;
+  right: 24%;
+  width: 100px;
+  height: 620px;
+  transition:  0.8s ease-in-out;
+  background-color:transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.portaMiguelito:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;
+}
+
+.portaLorencini{
+  position: absolute;
+  top: 27%;
+  right: 33%;
+  width: 33px;
+  height: 450px;
+  background-color:transparent;
+  border: none;
+  cursor: pointer;
+  transition:  0.8s ease-in-out;
+}
+
+.portaLorencini:hover {
+  box-shadow: 1px 1px 5px 5px white;
+  transition:  0.8s ease-in-out;
 }

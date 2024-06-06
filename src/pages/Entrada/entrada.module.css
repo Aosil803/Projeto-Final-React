@@ -16,10 +16,10 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: 0.6 ease-in-out;
+  transition:  0.8s ease-in-out;
 }
 
-.mainPage:hover {
+.portaEntrada:hover {
   box-shadow: 1px 1px 5px 5px white;
-  transition: 0.6 ease-in-out;
+  transition:  0.8s ease-in-out;
 }
