@@ -21,5 +21,7 @@ export const PortaCrime = () => {
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
+    <button className={style.ferida}></button>
+    <button className={style.porteira}></button>
   </div>
 };
