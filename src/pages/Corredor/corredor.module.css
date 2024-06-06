@@ -17,55 +17,55 @@
   border: none;
   z-index: 2;
   cursor: pointer;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
 }
 
 .portaCrime:hover {
   box-shadow: 1px 1px 5px 5px white;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
 }
 
 .portaBonas{
   position: absolute;
   top: 1%;
-  left: 15%;
+  left: 13%;
   width: 7%;
   height: 98%;
   background:transparent;
   border: none;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
   cursor: pointer;
 }
 
 .portaBonas:hover {
   box-shadow: 1px 1px 5px 5px white;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
 }
 
 .portaAlex{
   position: absolute;
-  width: 4%;
+  width: 3%;
   height: 72%;
   background-color:transparent;
   border: none;
-  left: 26%;
+  left: 25%;
   top: 19%;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
   cursor: pointer;
 }
 
 .portaAlex:hover {
   box-shadow: 1px 1px 5px 5px white;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
 }
 
 .portaYuka{
   position: absolute;
   top: 1%;
-  right: 9%;
-  width: 9%;
+  right: 6%;
+  width: 10%;
   height: 98%;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
   background-color:transparent;
   border: none;
   cursor: pointer;
@@ -73,16 +73,16 @@
 
 .portaYuka:hover {
   box-shadow: 1px 1px 5px 5px white;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
 }
 
 .portaMiguelito{
   position: absolute;
   top: 16%;
-  right: 24%;
+  right: 22.6%;
   width: 4%;
   height: 77%;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
   background-color:transparent;
   border: none;
   cursor: pointer;
@@ -90,22 +90,33 @@
 
 .portaMiguelito:hover {
   box-shadow: 1px 1px 5px 5px white;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
 }
 
 .portaLorencini{
   position: absolute;
   top: 27%;
-  right: 32%;
-  width: 3%;
+  right: 31%;
+  width: 2.5%;
   height: 57%;
   background-color:transparent;
   border: none;
   cursor: pointer;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
 }
 
 .portaLorencini:hover {
   box-shadow: 1px 1px 5px 5px white;
-  transition:  0.8s ease-in-out;
+  transition:  0.4s ease-in-out;
+}
+
+.containerIcon{
+  position: absolute;
+  background: transparent;
+  bottom: 0;
+  left: 45%;
+}
+
+.homeIcon{
+  width: 55%;
 }

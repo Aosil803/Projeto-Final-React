@@ -8,11 +8,11 @@
 
 .portaEntrada{
   position: absolute;
-  top: 27%;
-  right: 34%;
+  top: 27.2%;
+  right: 34.1%;
   z-index: 1;
-  width: 73px;
-  height: 145px;
+  width: 5%;
+  height: 24%;
   background: transparent;
   border: none;
   cursor: pointer;

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import corredor from "../../assets/corredor.png"
 import style from "./corredor.module.css"
+import home from "../../assets/home.gif"
 
 export const Corredor = () => {
 
@@ -26,7 +27,7 @@ export const Corredor = () => {
     navigate('../quartoLorencini');
   }
   function Home() {
-    navigate('../home');
+    navigate('../corredor');
   }
 
   return <div>
@@ -40,5 +41,10 @@ export const Corredor = () => {
         <button className={style.portaMiguelito} onClick={PortaMiguelito}></button>
         <button className={style.portaLorencini} onClick={PortaLorencini}></button>
         <button className={style.home} onClick={Home}></button>
+        <div className={style.containerIcon}>
+          <a href="#" onClick={Home}>
+            <img className={style.homeIcon} src={home} alt="icon home" />
+          </a>
+        </div>
   </div>
 };
