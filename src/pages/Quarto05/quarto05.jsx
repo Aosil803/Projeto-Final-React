@@ -14,7 +14,7 @@ export const QuartoMiguelito = () => {
   return <div>
     <img className={style.quarto05} src={quarto05} alt="Quarto do Miguelito" />
     <button className={style.home} onClick={Home}></button>
-      <p className={style.tituloLocal}>Quarto Miguelito</p>
+      <p className={style.tituloLocal}>Quarto do Miguelito</p>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />

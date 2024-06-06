@@ -20,7 +20,7 @@ export const QuartoYuka = () => {
     <div>
     <img className={style.quarto03} src={quarto03} alt="Quarto da yuka" />
     </div>
-    <p className={style.tituloLocal}>Quarto Yuka</p>
+    <p className={style.tituloLocal}>Quarto da Yuka</p>
     <button className={style.caixa} onClick={() => setOpenPopupCaixa(!openPopupCaixa)}></button>
     <button className={style.gato} onClick={() => setOpenPopupGato(!openPopupGato)}></button>
     <button className={style.sangue} onClick={() => setOpenPopupSangue(!openPopupSangue)}></button>

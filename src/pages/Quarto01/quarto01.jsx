@@ -16,7 +16,7 @@ export const QuartoAlex = () => {
       <div>
         <img className={style.quarto01} src={quarto01} alt="Quarto do Alex" />
       </div>
-      <p className={style.tituloLocal}>Quarto Alex</p>
+      <p className={style.tituloLocal}>Quarto do Alex</p>
       <button className={style.home} onClick={Home}></button>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
