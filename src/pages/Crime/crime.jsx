@@ -1,4 +1,4 @@
-import crime from "../../assets/cenaDoCrime.png"
+import crime from "../../assets/cenaCrime.png"
 import style from "./crime.module.css"
 
 

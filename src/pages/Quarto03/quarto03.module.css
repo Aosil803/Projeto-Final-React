@@ -10,12 +10,13 @@
   bottom: 10%;
   left: 6.1%;
   z-index: 1;
-  width: 150px;
-  height: 110px;
+  width: 8%;
+  height: 14%;
   background: transparent;
   border: none;
   cursor: pointer;
   transition:  0.8s ease-in-out;
+  box-shadow: 1px 1px 5px 5px white;
 }
 
 .caixa:hover {
@@ -27,12 +28,13 @@
   bottom: 15%;
   right: 26.4%;
   z-index: 1;
-  width: 102px;
-  height: 160px;
+  width: 5.2%;
+  height: 20%;
   background: transparent;
   border: none;
   cursor: pointer;
   transition:  0.8s ease-in-out;
+  box-shadow: 1px 1px 5px 5px white;
 }
 .gato:hover {
   box-shadow: 1px 1px 5px 5px white;
