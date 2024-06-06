@@ -35,10 +35,10 @@ export const QuartoYuka = () => {
       openPopupCaixa &&
     <div className={style.caixaPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Caixa de papelão</h2>
         <button onClick={()=> setOpenPopupCaixa(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Dentro dessa caixa você encontra um spray para ferimentos, gaze e ataduras cortadas.</p>
     </div>
     }
 
@@ -46,10 +46,10 @@ export const QuartoYuka = () => {
       openPopupGato &&
     <div className={style.gatoPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Tuquito</h2>
         <button onClick={()=> setOpenPopupGato(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Gato PopUp </p>
+      <p className={style.textoPopUp}>Ele está mancando, com uma grande ferida aberta nas costas. Tuquito te comprimenta com um miado simpático. </p>
     </div>
     }
 
@@ -57,10 +57,10 @@ export const QuartoYuka = () => {
       openPopupSangue &&
     <div className={style.sanguePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Mancha de sangue?</h2>
         <button onClick={()=> setOpenPopupSangue(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>muito sangue pop PopUp </p>
+      <p className={style.textoPopUp}>Parece que alguém sujou essa cadeira ao tentar arrastá-la.</p>
     </div>
     }
   </div>
