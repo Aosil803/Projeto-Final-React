@@ -48,7 +48,7 @@ export const QuartoAlex = () => {
         <h2>Gaveta</h2>
         <button onClick={()=> setOpenPopupGaveta(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Há uma Intimação Judicial dentro dela.</p>
+      <p className={style.textoPopUp}>Há uma Ação Judicial dentro dela. Tem o nome Fred e Alex no documento.</p>
     </div>
     }
 
@@ -59,7 +59,7 @@ export const QuartoAlex = () => {
         <h2>Chaves</h2>
         <button onClick={()=> setOpenPopupChave(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Uma chave um pouco antiga. Há uma etiqueta nela escrito "Depósito Jadim dos Fundos" </p>
+      <p className={style.textoPopUp}>Uma chave um pouco antiga. Há uma etiqueta nela escrito "Depósito Jadim dos fundos". </p>
     </div>
     }
 

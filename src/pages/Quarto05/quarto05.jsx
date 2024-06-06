@@ -32,10 +32,10 @@ export const QuartoMiguelito = () => {
       openPopupSangue &&
     <div className={style.sanguePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Isso é Sangue!?</h2>
         <button onClick={()=> setOpenPopupSangue(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>O travesseiro e parte do edredom estão com manchas de sangue, o que aconteceu?</p>
     </div>
     }
 
@@ -43,10 +43,10 @@ export const QuartoMiguelito = () => {
       openPopupEvidencia &&
     <div className={style.evidenciaPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>(Nome da Ferramenta)</h2>
         <button onClick={()=> setOpenPopupEvidencia(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Ela está com cheiro de sabão. </p>
     </div>
     }
 
@@ -54,10 +54,10 @@ export const QuartoMiguelito = () => {
       openPopupComputador &&
     <div className={style.computadorPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>PopUp</h2>
+        <h2>Computador ligado</h2>
         <button onClick={()=> setOpenPopupComputador(false)}>X</button>
       </div>
-      <p className={style.textoPopUp}>Caixa PopUp </p>
+      <p className={style.textoPopUp}>Está aberto em um site de resenhas de anime.</p>
     </div>
     }
 
