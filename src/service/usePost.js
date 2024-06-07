@@ -11,6 +11,13 @@ export function postUser(usuario) {
 	const url = '/usuarios';
 
     console.log(usuario)
-	return apiMock.post(url, {body: usuario}).then(url).catch(console.error());
+    
+	return apiMock.post(url, {...usuario}).then(url).catch(console.error());
+}
+
+export function getUser() {
+	const url = '/usuarios';
+
+	return apiMock.get(url);
 }
 
