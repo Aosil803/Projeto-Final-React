@@ -32,6 +32,7 @@ function App() {
 
   }
 
+  /*---videoIntroTransição---*/
   useEffect(() => {
     const introductionVideo = document.querySelector('.' + style.opening);
     const backgroundVideo = document.querySelector('.' + style.backGround);
@@ -88,19 +89,19 @@ function App() {
             <button type="submit">Enviar</button>
           </form> */}
         </nav>
-          <div className={style.iconContainer + ' animate__animated animate__fadeInRight animate__delay-5s'}>
-            <a href="#"><img className={style.iconAvatar} src={icone} alt="" onClick={() => setOpenForm(!openForm)}/></a>
-          </div>
+        <div className={style.iconContainer + ' animate__animated animate__fadeInRight animate__delay-5s'}>
+          <a href="#"><img className={style.iconAvatar} src={icone} alt="" onClick={() => setOpenForm(!openForm)}/></a>
+        </div>
 
-          {
-            openForm &&
-            <form action="#" className={style.formContainer}>
-              <h2 className={style.h2Style}>REGISTER / LOGIN</h2>
-              <div className={style.underline}></div>
-              <div className={style.inputData}>
-                <input type="text" required />
-                <label htmlFor="#">Email</label>
-              </div>
+        {
+          openForm &&
+          <form action="#" className={style.formContainer}>
+            <h2 className={style.h2Style}>REGISTER / LOGIN</h2>
+            <div className={style.underline}></div>
+            <div className={style.inputData}>
+              <input type="text" required />
+              <label htmlFor="#">Email</label>
+            </div>
             <section>
               <div className={style.inputData}>
                 <input type="password" required/>
