@@ -11,10 +11,6 @@ function App() {
   const [senha, setSenha] = useState("");
 
   const navigate = useNavigate();
-  const usuario = {
-    email: "bonafe",
-    senha: "lc"
-  };
   
   useEffect(() =>{
     getConselhoById().
@@ -24,38 +20,17 @@ function App() {
         console.log(error));  
   }, []);
 
-  useEffect(() => {
-    axios.post('https://6660c1015425580055b52043.mockapi.io/api/usuarios', usuario, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
 
   const handleSubmit = (e) => { 
-    e.preventDefault();
+    e.preventDefault();//tirar
     const usuario = {
       email: email,
       senha: senha
       
     };
-
     postUser(usuario);
-  }
 
-  useEffect(() =>{ // ver se é necessário tirar then e catch
-    getConselhoById().
-      then((response) => 
-        console.log(response)).
-      catch((error) => 
-        console.log(error));  
-  }, []);// implementar no pop up
+  }
 
   useEffect(() => {
     const introductionVideo = document.querySelector('.' + style.opening);
@@ -107,8 +82,7 @@ function App() {
               />
             </div>
             <button type="submit">Enviar</button>
-          </form>
-           */}
+          </form> */}
         </nav>
       </div>
     </>

@@ -10,4 +10,3 @@ export function getConselhoById() { // ver como fazer para quando mudar de perso
 	return apiAdvice.get(url);
 }
 
-//validação com then ou await
