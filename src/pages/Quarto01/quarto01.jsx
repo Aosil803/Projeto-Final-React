@@ -7,7 +7,7 @@ import cofre from "../../assets/quartoAlex/cofre.png"
 import chave from "../../assets/quartoAlex/chaves.png"
 import documento from "../../assets/quartoAlex/documento.png"
 import  Button from '../../components/button'
-
+import PopUp from '../../components/PopUp/popUp.jsx'
 
 export const QuartoAlex = () => {
   const navigate = useNavigate();
@@ -34,40 +34,31 @@ export const QuartoAlex = () => {
     <Button className={style.gaveta} onClick={() => setOpenPopupGaveta(!openPopupGaveta)}/>
     <Button className={style.chave} onClick={() => setOpenPopupChave(!openPopupChave)}/>
 
-    {
-      openPopupCofre &&
-    <div className={style.cofrePopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Cofre Antigo<span className={style.spanPop} onClick={()=> setOpenPopupCofre(false)}>X</span></h2>
-        <img src={cofre} alt="Cofre antigo" />
-      </div>
-      <p className={style.textoPopUp}>Dentro dele você encontra MUITO dinheiro.</p>
-    </div>
-    }
+    <PopUp  style={{position:"absolute", top: 180, left: 590, width:250,}}
+        open={openPopupCofre}
+        onClose={() => setOpenPopupCofre(false)}
+        title="Cofre"
+      >
+        <img src={cofre} alt="cofre" />
+      <p>Dentro dele você encontra MUITO dinheiro.Atrás dela há uma porta trancada.</p>
+    </PopUp>
 
-    {
-      openPopupGaveta &&
-    <div className={style.gavetaPopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Gaveta<span className={style.spanPop} onClick={()=> setOpenPopupGaveta(false)}>X</span></h2>
-        <img src={documento} alt="Ação judicial" />
-      </div>
-      <p className={style.textoPopUp}>Há uma Ação Judicial dentro dela. Tem o nome Fred e Alex no documento.</p>
-    </div>
-    }
+    <PopUp  style={{position:"absolute", top: 350, right: 380, width:200,}}
+        open={openPopupGaveta}
+        onClose={() => setOpenPopupGaveta(false)}
+        title="Gaveta"
+      >
+        <img src={documento} alt="Ação Judicial" />
+      <p>Há uma Ação Judicial dentro dela. Tem o nome Fred e Alex no documento.</p>
+    </PopUp>
 
-    {
-      openPopupChave &&
-    <div className={style.chavePopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Chaves<span className={style.spanPop} onClick={()=> setOpenPopupChave(false)}>X</span></h2>
+    <PopUp  style={{position:"absolute", top: 160, right: 160, width: 200, height: 270,}}
+        open={openPopupChave}
+        onClose={() => setOpenPopupChave(false)}
+        title="Chave"
+      >
         <img src={chave} alt="Chaves do Jardim" />
-      </div>
-      <p className={style.textoPopUp}>Uma chave um pouco antiga. Há uma etiqueta nela escrito <span>Depósito Jadim dos fundos</span>. </p>
-    </div>
-    }
-
-
-
+      <p>Uma chave um pouco antiga. Há uma etiqueta nela escrito <span>Depósito Jadim dos fundos</span>. </p>
+    </PopUp>
   </div>
 };

@@ -7,7 +7,7 @@ import gato from '../../assets/quartoYuka/gato.png'
 import caixaPapelao from '../../assets/quartoYuka/caixa.jpg'
 import sangue from '../../assets/quartoYuka/sangue.png'
 import  Button from '../../components/button'
-
+import PopUp from '../../components/PopUp/popUp.jsx'
 
 export const QuartoYuka = () => {
   const [openPopupCaixa ,setOpenPopupCaixa] = useState(false)
@@ -35,37 +35,32 @@ export const QuartoYuka = () => {
         </a>
     </div>
 
-    {
-      openPopupCaixa &&
-    <div className={style.caixaPopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Caixa de Papelão<span className={style.spanPop} onClick={()=> setOpenPopupCaixa(false)}>X</span></h2>
-        <img src={caixaPapelao} alt="caixa de papelão" />
-      </div>
-      <p className={style.textoPopUp}>Dentro dessa caixa você encontra um spray para ferimentos, gaze e ataduras cortadas.</p>
-    </div>
-    }
+    <PopUp  style={{position:"absolute", top: 250, left: 360, width: 250,}}
+        open={openPopupCaixa}
+        onClose={() => setOpenPopupCaixa(false)}
+        title="Caixa de Papelão"
+      >
+        <img src={caixaPapelao} alt="Caixa de Papelão" />
+      <p>Dentro dessa caixa você encontra um spray para ferimentos, gaze e ataduras cortadas.</p>
+    </PopUp>
 
-    {
-      openPopupGato &&
-    <div className={style.gatoPopUp}>
-      <div className={style.caixaPopUpInterna}>
-        <h2 className={style.tituloPop}>Tuquito <span className={style.spanPop} onClick={()=> setOpenPopupGato(false)}>X</span></h2>
-        <img  src={gato} alt="gato" />
-      </div>
-      <p className={style.textoPopUp}>Ele está mancando, com uma grande ferida aberta nas costas. Tuquito te comprimenta com um miado simpático. </p>
-    </div>
-    }
+    <PopUp  style={{position:"absolute", top: 210, right: 340, width: 300,}}
+        open={openPopupGato}
+        onClose={() => setOpenPopupGato(false)}
+        title="Toquito"
+      >
+        <img src={gato} alt="Porteira" />
+      <p>Ele está mancando, com uma grande ferida aberta nas costas. Tuquito te comprimenta com um miado simpático. </p>
+    </PopUp>
 
-    {
-      openPopupSangue &&
-    <div className={style.sanguePopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Marca de Sangue! <span className={style.spanPop} onClick={()=> setOpenPopupSangue(false)}>X</span></h2>
-        <img  src={sangue} alt="sangue" />
-      </div>
-      <p className={style.textoPopUp}>Parece que alguém sujou essa cadeira ao tentar arrastá-la.</p>
-    </div>
-    }
+    <PopUp  style={{position:"absolute", 
+        top: 160, right: 30, width: 200,}}
+        open={openPopupSangue}
+        onClose={() => setOpenPopupSangue(false)}
+        title="Mancha de Sangue"
+      >
+        <img src={sangue} alt="sangue" />
+      <p>Parece que alguém sujou essa cadeira ao tentar arrastá-la.</p>
+    </PopUp>
   </div>
 };

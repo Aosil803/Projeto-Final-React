@@ -28,8 +28,6 @@ export const PortaCrime = () => {
     <Button className={style.ferida} onClick={() => setOpenPopupFerida(!openPopupFerida)}/>
     <Button className={style.porteira} onClick={() => setOpenPopupPorta(!openPopupPorta)}/>
 
-    
-    
       <PopUp  style={{position:"absolute", top: 150, left: 460}}
         open={openPopupPorta}
         onClose={() => setOpenPopupPorta(false)}

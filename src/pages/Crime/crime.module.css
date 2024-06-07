@@ -63,11 +63,6 @@
   transition:  0.8s ease-in-out;
 }
 
-
-
-
-
-
 @keyframes fadeInBackground {
     from { opacity: 0; }
     to { opacity: 1; }
