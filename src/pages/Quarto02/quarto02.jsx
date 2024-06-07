@@ -39,7 +39,7 @@ export const QuartoBonas = () => {
     <div className={style.lapTopPopUp}>
       <div className={style.caixaPopUpInterna}>
       <h2 className={style.tituloPop}>Notebook <span className={style.spanPop} onClick={()=> setOpenPopupLapTop(false)}>X</span></h2>
-        <img  src={note} alt="notebook" />
+        <img  src={note} alt="Notebook" />
       </div>
       <p className={style.textoPopUp}>Não está ligando. O teclado está com água.</p>
     </div>
@@ -50,7 +50,7 @@ export const QuartoBonas = () => {
     <div className={style.livroPopUp}>
       <div className={style.caixaPopUpInterna}>
       <h2 className={style.tituloPop}>Diário Pessoal<span className={style.spanPop} onClick={()=> setOpenPopupLivro(false)}>X</span></h2>
-        <img  src={diario} alt="notebook" />
+        <img  src={diario} alt="Diário Pessoal" />
       </div>
       <p className={style.textoPopUp}> "Que ódio que me dá quando isso acontece!"..."Será que foi necessário?"</p>
     </div>
@@ -61,7 +61,7 @@ export const QuartoBonas = () => {
     <div className={style.canivetePopUp}>
       <div className={style.caixaPopUpInterna}>
       <h2 className={style.tituloPop}>Canivete Pessoal<span className={style.spanPop} onClick={()=> setOpenPopupLivro(false)}>X</span></h2>
-        <img  src={canivete} alt="notebook" />
+        <img  src={canivete} alt="Canivete" />
       </div>
       <p className={style.textoPopUp}>Um canivete aparentemente novo, poucas marcas de uso. Parece ter uma linha presa na lâmina.</p>
     </div>

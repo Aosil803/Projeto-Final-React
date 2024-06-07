@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import quarto01 from "../../assets/quartoAlex.png"
 import style from "./quarto01.module.css"
 import home from "../../assets/home.gif"
+import cofre from "../../assets/quartoAlex/cofre.png"
+import chave from "../../assets/quartoAlex/chaves.png"
+import documento from "../../assets/quartoAlex/documento.png"
 
 
 export const QuartoAlex = () => {
@@ -34,8 +37,8 @@ export const QuartoAlex = () => {
       openPopupCofre &&
     <div className={style.cofrePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Cofre de Madeira</h2>
-        <button onClick={()=> setOpenPopupCofre(false)}>X</button>
+      <h2 className={style.tituloPop}>Cofre Antigo<span className={style.spanPop} onClick={()=> setOpenPopupCofre(false)}>X</span></h2>
+        <img src={cofre} alt="Cofre antigo" />
       </div>
       <p className={style.textoPopUp}>Dentro dele você encontra MUITO dinheiro.</p>
     </div>
@@ -45,8 +48,8 @@ export const QuartoAlex = () => {
       openPopupGaveta &&
     <div className={style.gavetaPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Gaveta</h2>
-        <button onClick={()=> setOpenPopupGaveta(false)}>X</button>
+      <h2 className={style.tituloPop}>Gaveta<span className={style.spanPop} onClick={()=> setOpenPopupGaveta(false)}>X</span></h2>
+        <img src={documento} alt="Ação judicial" />
       </div>
       <p className={style.textoPopUp}>Há uma Ação Judicial dentro dela. Tem o nome Fred e Alex no documento.</p>
     </div>
@@ -56,8 +59,8 @@ export const QuartoAlex = () => {
       openPopupChave &&
     <div className={style.chavePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Chaves</h2>
-        <button onClick={()=> setOpenPopupChave(false)}>X</button>
+      <h2 className={style.tituloPop}>Chaves<span className={style.spanPop} onClick={()=> setOpenPopupChave(false)}>X</span></h2>
+        <img src={chave} alt="Chaves do Jardim" />
       </div>
       <p className={style.textoPopUp}>Uma chave um pouco antiga. Há uma etiqueta nela escrito "Depósito Jadim dos fundos". </p>
     </div>
