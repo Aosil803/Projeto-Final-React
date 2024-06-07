@@ -7,6 +7,7 @@ import note from "../../assets/quartoBonas/notebook.png"
 import diario from "../../assets/quartoBonas/diario.png"
 import canivete from "../../assets/quartoBonas/canivete.png"
 import  Button from '../../components/button'
+import PopUp from '../../components/PopUp/popUp.jsx'
 
 
 export const QuartoBonas = () => {
@@ -35,38 +36,32 @@ export const QuartoBonas = () => {
       <Button className={style.diario} onClick={() => setOpenPopupLivro(!openPopupLivro)}/>
       <Button className={style.canivete} onClick={() => setOpenPopupCanivete(!openPopupCanivete)}/>
 
-    {
-      openPopupLapTop &&
-    <div className={style.lapTopPopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Notebook <span className={style.spanPop} onClick={()=> setOpenPopupLapTop(false)}>X</span></h2>
-        <img  src={note} alt="Notebook" />
-      </div>
-      <p className={style.textoPopUp}>Não está ligando. O teclado está com água.</p>
-    </div>
-    }
+      <PopUp  style={{position:"absolute", top: 200, left: 700, width: 250}}
+        open={openPopupLapTop}
+        onClose={() => setOpenPopupLapTop(false)}
+        title="Notebook Quebrado"
+      >
+        <img src={note} alt="Notebook" />
+      <p>Não está ligando. O teclado está com água.</p>
+      </PopUp>
 
-    {
-      openPopupLivro &&
-    <div className={style.livroPopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Diário Pessoal<span className={style.spanPop} onClick={()=> setOpenPopupLivro(false)}>X</span></h2>
-        <img  src={diario} alt="Diário Pessoal" />
-      </div>
-      <p className={style.textoPopUp}> <span>Que ódio que me dá quando isso acontece!</span>...<span>Será que foi necessário?</span></p>
-    </div>
-    }
+      <PopUp  style={{position:"absolute", top: 420, left: 400, width: 250}}
+        open={openPopupLivro}
+        onClose={() => setOpenPopupLivro(false)}
+        title="Diário Pessoal"
+      >
+        <img src={diario} alt="Diário" />
+        <p>"Que ódio que me dá quando isso acontece!"..."Será que foi necessário?"</p>
+      </PopUp>
 
-    {
-      openPopupCanivete &&
-    <div className={style.canivetePopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Canivete Pessoal<span className={style.spanPop} onClick={()=> setOpenPopupLivro(false)}>X</span></h2>
-        <img  src={canivete} alt="Canivete" />
-      </div>
-      <p className={style.textoPopUp}>Um canivete aparentemente novo, poucas marcas de uso. Parece ter uma linha presa na lâmina.</p>
-    </div>
-    }
+      <PopUp  style={{position:"absolute", top: 320, right: 1, width: 250}}
+        open={openPopupCanivete}
+        onClose={() => setOpenPopupCanivete(false)}
+        title="Canivete Suiço"
+      >
+        <img src={canivete} alt="Canivete" />
+        <p>Um canivete aparentemente novo, poucas marcas de uso. Parece ter uma linha presa na lâmina.</p>
+      </PopUp>
 
   </div>
 };
