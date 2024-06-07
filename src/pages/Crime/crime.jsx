@@ -29,8 +29,8 @@ export const PortaCrime = () => {
     <Button className={style.porteira} onClick={() => setOpenPopupPorta(!openPopupPorta)}/>
 
     
-    <div className={style.porteiraPopUp}>
-      <PopUp  style={{position:"absolute", top: 150, left: 570}}
+    
+      <PopUp  style={{position:"absolute", top: 150, left: 460}}
         open={openPopupPorta}
         onClose={() => setOpenPopupPorta(false)}
         title="Porteira"
@@ -38,16 +38,16 @@ export const PortaCrime = () => {
         <img src={porta} alt="Porteira" />
       <p>Atrás dela há uma porta trancada.</p>
       </PopUp>
-    </div>
+    
 
-
-    <PopUp 
-      open={openPopupFerida}
-      onClose={() => setOpenPopupFerida(false)}
-      title="Porteira"
-    >
-      <img src={corte} alt="Ferida" />
-    <p>Que horrível! Parece ser um corte, e tem terra em volta dele.</p>
-    </PopUp>
+      <PopUp style={{position:"absolute", top: 340, left: 770}}
+        open={openPopupFerida}
+        onClose={() => setOpenPopupFerida(false)}
+        title="Porteira"
+      >
+        <img src={corte} alt="Ferida" />
+      <p>Que horrível! Parece ser um corte, e tem terra em volta dele.</p>
+      </PopUp>
+    
   </div>
 };
