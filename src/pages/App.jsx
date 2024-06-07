@@ -9,7 +9,34 @@ import { postUser } from '../service/usePost';
 function App() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+
   const navigate = useNavigate();
+  const usuario = {
+    email: "bonafe",
+    senha: "lc"
+  };
+  
+  useEffect(() =>{
+    getConselhoById().
+      then((response) => 
+        console.log(response)).
+      catch((error) => 
+        console.log(error));  
+  }, []);
+
+  useEffect(() => {
+    axios.post('https://6660c1015425580055b52043.mockapi.io/api/usuarios', usuario, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   const handleSubmit = (e) => { 
     e.preventDefault();
