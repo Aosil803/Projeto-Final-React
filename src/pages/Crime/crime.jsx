@@ -3,6 +3,8 @@ import crime from "../../assets/cenaCrime.png"
 import style from "./crime.module.css"
 import home from "../../assets/home.gif"
 import { useState } from 'react';
+import corte from "../../assets/cenaCrime/corte.png"
+import porta from "../../assets/cenaCrime/porta.png"
 
 
 export const PortaCrime = () => {
@@ -29,8 +31,8 @@ export const PortaCrime = () => {
       openPopupPorta &&
     <div className={style.portaPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Porteira Velha</h2>
-        <button onClick={()=> setOpenPopupPorta(false)}>X</button>
+      <h2 className={style.tituloPop}>Porteira<span className={style.spanPop} onClick={()=> setOpenPopupPorta(false)}>X</span></h2>
+        <img src={porta} alt="Porteira" />
       </div>
       <p className={style.textoPopUp}>Atras dela há uma porta trancada.</p>
     </div>
@@ -40,8 +42,8 @@ export const PortaCrime = () => {
       openPopupFerida &&
     <div className={style.feridaPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Ferimento da Vítma</h2>
-        <button onClick={()=> setOpenPopupFerida(false)}>X</button>
+        <h2 className={style.tituloPop}>Corpo da vítima<span className={style.spanPop} onClick={()=> setOpenPopupFerida(false)}>X</span></h2>
+        <img src={corte} alt="Corpo da vítima" />
       </div>
       <p className={style.textoPopUp}>Que horrível! Parece ser um corte, e tem terra em volta dele.</p>
     </div>
