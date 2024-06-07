@@ -6,6 +6,7 @@ import home from "../../assets/home.gif"
 import sangue from "../../assets/quartoMiguel/sangue.png"
 import foice from "../../assets/quartoMiguel/foice.png"
 import crime from "../../assets/quartoMiguel/crime.png"
+import  Button from '../../components/button'
 
 
 export const QuartoMiguelito = () => {
@@ -20,16 +21,16 @@ export const QuartoMiguelito = () => {
 
   return <div>
     <img className={style.quarto05} src={quarto05} alt="Quarto do Miguelito" />
-    <button className={style.home} onClick={Home}></button>
+    <Button className={style.home} onClick={Home}/>
       <p className={style.tituloLocal}>Quarto do Miguelito</p>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-    <button className={style.brilho} onClick={() => setOpenPopupEvidencia(!openPopupEvidencia)}></button>
-    <button className={style.monitor} onClick={() => setOpenPopupComputador(!openPopupComputador)}></button>
-    <button className={style.sangue} onClick={() => setOpenPopupSangue(!openPopupSangue)}></button>
+    <Button className={style.brilho} onClick={() => setOpenPopupEvidencia(!openPopupEvidencia)}/>
+    <Button className={style.monitor} onClick={() => setOpenPopupComputador(!openPopupComputador)}/>
+    <Button className={style.sangue} onClick={() => setOpenPopupSangue(!openPopupSangue)}/>
 
     {
       openPopupSangue &&

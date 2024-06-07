@@ -6,6 +6,7 @@ import home from "../../assets/home.gif"
 import cofre from "../../assets/quartoAlex/cofre.png"
 import chave from "../../assets/quartoAlex/chaves.png"
 import documento from "../../assets/quartoAlex/documento.png"
+import  Button from '../../components/button'
 
 
 export const QuartoAlex = () => {
@@ -23,15 +24,15 @@ export const QuartoAlex = () => {
         <img className={style.quarto01} src={quarto01} alt="Quarto do Alex" />
       </div>
       <p className={style.tituloLocal}>Quarto do Alex</p>
-      <button className={style.home} onClick={Home}></button>
+      <Button className={style.home} onClick={Home}/>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-    <button className={style.caixaArmario} onClick={() => setOpenPopupCofre(!openPopupCofre)}></button>
-    <button className={style.gaveta} onClick={() => setOpenPopupGaveta(!openPopupGaveta)}></button>
-    <button className={style.chave} onClick={() => setOpenPopupChave(!openPopupChave)}></button>
+    <Button className={style.caixaArmario} onClick={() => setOpenPopupCofre(!openPopupCofre)}/>
+    <Button className={style.gaveta} onClick={() => setOpenPopupGaveta(!openPopupGaveta)}/>
+    <Button className={style.chave} onClick={() => setOpenPopupChave(!openPopupChave)}/>
 
     {
       openPopupCofre &&
@@ -62,7 +63,7 @@ export const QuartoAlex = () => {
       <h2 className={style.tituloPop}>Chaves<span className={style.spanPop} onClick={()=> setOpenPopupChave(false)}>X</span></h2>
         <img src={chave} alt="Chaves do Jardim" />
       </div>
-      <p className={style.textoPopUp}>Uma chave um pouco antiga. Há uma etiqueta nela escrito "Depósito Jadim dos fundos". </p>
+      <p className={style.textoPopUp}>Uma chave um pouco antiga. Há uma etiqueta nela escrito <span>Depósito Jadim dos fundos</span>. </p>
     </div>
     }
 

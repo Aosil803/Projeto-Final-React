@@ -159,6 +159,14 @@
   padding: 1%;
 }
 
+.textoPopUp span::before{
+  content: '"';
+}
+
+.textoPopUp span::after{
+  content: '"';
+}
+
   @keyframes fadeInBackground {
     from { opacity: 0; }
     to { opacity: 1; }

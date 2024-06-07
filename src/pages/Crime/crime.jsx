@@ -5,6 +5,7 @@ import home from "../../assets/home.gif"
 import { useState } from 'react';
 import corte from "../../assets/cenaCrime/corte.png"
 import porta from "../../assets/cenaCrime/porta.png"
+import  Button from '../../components/button'
 
 
 export const PortaCrime = () => {
@@ -17,15 +18,15 @@ export const PortaCrime = () => {
 
   return <div>
       <img className={style.crime} src={crime} alt="cena do crime" />
-      <button className={style.home} onClick={Home}></button>
+      <Button className={style.home} onClick={Home}/>
       <p className={style.tituloLocal}>Cena do Crime</p>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-    <button className={style.ferida} onClick={() => setOpenPopupFerida(!openPopupFerida)}></button>
-    <button className={style.porteira} onClick={() => setOpenPopupPorta(!openPopupPorta)}></button>
+    <Button className={style.ferida} onClick={() => setOpenPopupFerida(!openPopupFerida)}/>
+    <Button className={style.porteira} onClick={() => setOpenPopupPorta(!openPopupPorta)}/>
 
     {
       openPopupPorta &&
@@ -48,7 +49,5 @@ export const PortaCrime = () => {
       <p className={style.textoPopUp}>Que horrível! Parece ser um corte, e tem terra em volta dele.</p>
     </div>
     }
-
-
   </div>
 };

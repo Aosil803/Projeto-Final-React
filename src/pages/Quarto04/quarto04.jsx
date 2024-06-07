@@ -6,6 +6,7 @@ import home from "../../assets/home.gif"
 import dever from "../../assets/quartoLorencini/dever.png"
 import genshin from "../../assets/quartoLorencini/genshin.png"
 import produtos from "../../assets/quartoLorencini/produtos.png"
+import  Button from '../../components/button'
 
 export const QuartoLorencini = () => {
 
@@ -22,16 +23,16 @@ export const QuartoLorencini = () => {
       <div>
         <img className={style.quarto04} src={quarto04} alt="Quarto do Lorencini" />
       </div>
-      <button className={style.home} onClick={Home}></button>
+      <Button className={style.home} onClick={Home}/>
       <p className={style.tituloLocal}>Quarto do Lorencini</p>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-    <button className={style.balde} onClick={() => setOpenPopupBalde(!openPopupBalde)}></button>
-    <button className={style.computador} onClick={() => setOpenPopupComputador(!openPopupComputador)}></button>
-    <button className={style.dever} onClick={() => setOpenPopupDever(!openPopupDever)}></button>
+    <Button className={style.balde} onClick={() => setOpenPopupBalde(!openPopupBalde)}/>
+    <Button className={style.computador} onClick={() => setOpenPopupComputador(!openPopupComputador)}/>
+    <Button className={style.dever} onClick={() => setOpenPopupDever(!openPopupDever)}/>
 
     {
       openPopupComputador &&
@@ -46,15 +47,14 @@ export const QuartoLorencini = () => {
 
     {
       openPopupBalde &&
-    <div className={style.baldePopUp}>
-      <div className={style.caixaPopUpInterna}>
-       <h2 className= {style.tituloPop}>Produtos de Limpeza< span className= {style.spanPop} onClick={() => setOpenPopupBalde(false)}>X</span></h2>
-       <img src={produtos} alt= "Produtos de Limpeza" />
-      </div>
-      <p className={style.textoPopUp}>Sabão em pó, água sanitária e desifetante. Estão usados.</p>
+      <div className={style.baldePopUp}>
+        <div className={style.caixaPopUpInterna}>
+          <h2 className= {style.tituloPop}>Produtos de Limpeza< span className= {style.spanPop} onClick={() => setOpenPopupBalde(false)}>X</span></h2>
+          <img src={produtos} alt= "Produtos de Limpeza" />
+        </div>
+        <p className={style.textoPopUp}>Sabão em pó, água sanitária e desifetante. Estão usados.</p>
     </div>
     }
-
 {
       openPopupDever &&
     <div className={style.deverPopUp}>

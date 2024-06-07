@@ -6,6 +6,7 @@ import home from "../../assets/home.gif"
 import gato from '../../assets/quartoYuka/gato.png'
 import caixaPapelao from '../../assets/quartoYuka/caixa.jpg'
 import sangue from '../../assets/quartoYuka/sangue.png'
+import  Button from '../../components/button'
 
 
 export const QuartoYuka = () => {
@@ -24,10 +25,10 @@ export const QuartoYuka = () => {
     <img className={style.quarto03} src={quarto03} alt="Quarto da yuka" />
     </div>
     <p className={style.tituloLocal}>Quarto da Yuka</p>
-    <button className={style.caixa} onClick={() => setOpenPopupCaixa(!openPopupCaixa)}></button>
-    <button className={style.gato} onClick={() => setOpenPopupGato(!openPopupGato)}></button>
-    <button className={style.sangue} onClick={() => setOpenPopupSangue(!openPopupSangue)}></button>
-    <button className={style.home} onClick={Home}></button>
+    <Button className={style.caixa} onClick={() => setOpenPopupCaixa(!openPopupCaixa)}/>
+    <Button className={style.gato} onClick={() => setOpenPopupGato(!openPopupGato)}/>
+    <Button className={style.sangue} onClick={() => setOpenPopupSangue(!openPopupSangue)}/>
+    <Button className={style.home} onClick={Home}/>
     <div className={style.containerIcon}>
       <a href="#" onClick={Home}>
         <img className={style.homeIcon} src={home} alt="icon home" />
@@ -60,8 +61,8 @@ export const QuartoYuka = () => {
       openPopupSangue &&
     <div className={style.sanguePopUp}>
       <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Marca de Sangue! <span className={style.spanPop} onClick={()=> setOpenPopupGato(false)}>X</span></h2>
-        <img  src={sangue} alt="gato" />
+      <h2 className={style.tituloPop}>Marca de Sangue! <span className={style.spanPop} onClick={()=> setOpenPopupSangue(false)}>X</span></h2>
+        <img  src={sangue} alt="sangue" />
       </div>
       <p className={style.textoPopUp}>Parece que alguém sujou essa cadeira ao tentar arrastá-la.</p>
     </div>
