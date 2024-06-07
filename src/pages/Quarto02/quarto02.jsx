@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import quarto02 from "../../assets/quartoBonas.png"
 import style from "./quarto02.module.css"
 import home from "../../assets/home.gif"
+import note from "../../assets/quartoBonas/notebook.png"
+import diario from "../../assets/quartoBonas/diario.png"
+import canivete from "../../assets/quartoBonas/canivete.png"
 
 
 export const QuartoBonas = () => {
@@ -35,10 +38,10 @@ export const QuartoBonas = () => {
       openPopupLapTop &&
     <div className={style.lapTopPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Notebook novo</h2>
-        <button onClick={()=> setOpenPopupLapTop(false)}>X</button>
+      <h2 className={style.tituloPop}>Notebook <span className={style.spanPop} onClick={()=> setOpenPopupLapTop(false)}>X</span></h2>
+        <img  src={note} alt="notebook" />
       </div>
-      <p className={style.textoPopUp}>Não está ligando. Ao pegar ele saiu água do teclado.</p>
+      <p className={style.textoPopUp}>Não está ligando. O teclado está com água.</p>
     </div>
     }
 
@@ -46,8 +49,8 @@ export const QuartoBonas = () => {
       openPopupLivro &&
     <div className={style.livroPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Diário Pessoal</h2>
-        <button onClick={()=> setOpenPopupLivro(false)}>X</button>
+      <h2 className={style.tituloPop}>Diário Pessoal<span className={style.spanPop} onClick={()=> setOpenPopupLivro(false)}>X</span></h2>
+        <img  src={diario} alt="notebook" />
       </div>
       <p className={style.textoPopUp}> "Que ódio que me dá quando isso acontece!"..."Será que foi necessário?"</p>
     </div>
@@ -57,8 +60,8 @@ export const QuartoBonas = () => {
       openPopupCanivete &&
     <div className={style.canivetePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Canivete</h2>
-        <button onClick={()=> setOpenPopupCanivete(false)}>X</button>
+      <h2 className={style.tituloPop}>Canivete Pessoal<span className={style.spanPop} onClick={()=> setOpenPopupLivro(false)}>X</span></h2>
+        <img  src={canivete} alt="notebook" />
       </div>
       <p className={style.textoPopUp}>Um canivete aparentemente novo, poucas marcas de uso. Parece ter uma linha presa na lâmina.</p>
     </div>
