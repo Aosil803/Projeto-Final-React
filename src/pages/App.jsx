@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { postUser, getUser } from '../service/usePost';
+import { getConselhoById } from '../service/index.js';
 import style from './style.module.css';
 import opening from '../assets/republicaLogo.mp4';
 import backGround from '../assets/menuInicial.mp4';
