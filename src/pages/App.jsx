@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import { useNavigate} from 'react-router-dom';
 import style from './style.module.css'
 import opening from '../assets/republicaLogo.mp4'
-import backGround from '../assets/republica.mp4' 
 import { getConselhoById } from '../service';
 import { postUser } from '../service/usePost';
+import backGround from '../assets/menuInicial.mp4'
 
 function App() {
   const [email, setEmail] = useState("");
@@ -60,9 +60,10 @@ function App() {
         <video className={style.backGroundVideo} src={backGround}  loop autoPlay muted></video>
         <nav className={style.navBarMenu}>
           <ul className='animate__animated animate__fadeInLeft animate__delay-5s'>
-            <li><a href="#" onClick={Entrada}>A República</a></li>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Contato</a></li>
+            <div>
+              <li><a href="#" onClick={Entrada}>A República</a></li>
+              <p className={style.paragrafo}>Ajude a desvendar um crime</p>
+            </div>
           </ul>
             {/* <form onSubmit={handleSubmit}>
             <div>
@@ -84,6 +85,28 @@ function App() {
             <button type="submit">Enviar</button>
           </form> */}
         </nav>
+        <form action="#" className={style.formContainer}>
+            <h2 className={style.h2Style}>REGISTER / LOGIN</h2>
+            <div className={style.underline}></div>
+            <div className={style.inputData}>
+              <input type="text" required />
+              <label htmlFor="#">Email</label>
+            </div>
+            <section>
+              <div className={style.inputData}>
+                <input type="password" required/>
+                <label htmlFor="#">Senha</label>
+              </div>
+            </section>
+            <div className={style.inputData}>
+              <input type="text" placeholder='NickName'/>
+              <label htmlFor="#"></label>
+            </div>
+            <div className={style.divButton}>
+              <button className={style.buttonStyle}><span>Register</span></button>
+              <button className={style.buttonStyle}><span>Login</span></button>
+            </div>
+        </form>
       </div>
     </>
   )
