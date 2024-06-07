@@ -3,6 +3,9 @@ import { useState } from 'react';
 import quarto05 from "../../assets/quartoMiguelito.png"
 import style from "./quarto05.module.css"
 import home from "../../assets/home.gif"
+import sangue from "../../assets/quartoMiguel/sangue.png"
+import foice from "../../assets/quartoMiguel/foice.png"
+import crime from "../../assets/quartoMiguel/crime.png"
 
 
 export const QuartoMiguelito = () => {
@@ -32,8 +35,8 @@ export const QuartoMiguelito = () => {
       openPopupSangue &&
     <div className={style.sanguePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Isso é Sangue!?</h2>
-        <button onClick={()=> setOpenPopupSangue(false)}>X</button>
+        <h2 className={style.tituloPop}>Isso é Sangue?!<span className={style.spanPop} onClick={()=> setOpenPopupSangue(false)}>X</span></h2>
+        <img src={sangue} alt="Mancha de sangue" />
       </div>
       <p className={style.textoPopUp}>O travesseiro e parte do edredom estão com manchas de sangue, o que aconteceu?</p>
     </div>
@@ -43,8 +46,8 @@ export const QuartoMiguelito = () => {
       openPopupEvidencia &&
     <div className={style.evidenciaPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>(Nome da Ferramenta)</h2>
-        <button onClick={()=> setOpenPopupEvidencia(false)}>X</button>
+      <h2 className={style.tituloPop}>Foice de jardim<span className={style.spanPop} onClick={()=> setOpenPopupEvidencia(false)}>X</span></h2>
+        <img src={foice} alt="Foice de jardim" />
       </div>
       <p className={style.textoPopUp}>Ela está com cheiro de sabão. </p>
     </div>
@@ -54,8 +57,8 @@ export const QuartoMiguelito = () => {
       openPopupComputador &&
     <div className={style.computadorPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Computador ligado</h2>
-        <button onClick={()=> setOpenPopupComputador(false)}>X</button>
+       <h2 className={style.tituloPop}>Computador Ligado!<span className={style.spanPop} onClick={()=> setOpenPopupComputador(false)}>X</span></h2>
+        <img src={crime} alt="Computador ligado" />
       </div>
       <p className={style.textoPopUp}>Está aberto em um site de resenhas de anime.</p>
     </div>
