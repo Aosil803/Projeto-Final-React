@@ -89,7 +89,7 @@ function App() {
             <li><a href="#">Quem somos</a></li>
             <li><a href="#">Contato</a></li>
           </ul>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
             <div>
               <label>Email:</label>
               <input
@@ -108,6 +108,7 @@ function App() {
             </div>
             <button type="submit">Enviar</button>
           </form>
+           */}
         </nav>
       </div>
     </>
