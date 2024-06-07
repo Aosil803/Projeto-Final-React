@@ -3,6 +3,9 @@ import { useState } from 'react';
 import quarto04 from "../../assets/quartoLorencini.png"
 import style from "./quarto04.module.css"
 import home from "../../assets/home.gif"
+import dever from "../../assets/quartoLorencini/dever.png"
+import genshin from "../../assets/quartoLorencini/genshin.png"
+import produtos from "../../assets/quartoLorencini/produtos.png"
 
 export const QuartoLorencini = () => {
 
@@ -34,8 +37,8 @@ export const QuartoLorencini = () => {
       openPopupComputador &&
     <div className={style.computadorPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Computador Ligado</h2>
-        <button onClick={()=> setOpenPopupComputador(false)}>X</button>
+        <h2 className= {style.tituloPop}>Computador Ligado< span className= {style.spanPop} onClick={() => setOpenPopupComputador(false)}>X</span></h2>
+        <img src={genshin} alt= "Computador" />
       </div>
       <p className={style.textoPopUp}>Está aberto em um jogo.</p>
     </div>
@@ -45,8 +48,8 @@ export const QuartoLorencini = () => {
       openPopupBalde &&
     <div className={style.baldePopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Material de Limpeza</h2>
-        <button onClick={()=> setOpenPopupBalde(false)}>X</button>
+       <h2 className= {style.tituloPop}>Produtos de Limpeza< span className= {style.spanPop} onClick={() => setOpenPopupBalde(false)}>X</span></h2>
+       <img src={produtos} alt= "Produtos de Limpeza" />
       </div>
       <p className={style.textoPopUp}>Sabão em pó, água sanitária e desifetante. Estão usados.</p>
     </div>
@@ -56,8 +59,8 @@ export const QuartoLorencini = () => {
       openPopupDever &&
     <div className={style.deverPopUp}>
       <div className={style.caixaPopUpInterna}>
-        <h2>Dever de casa</h2>
-        <button onClick={()=> setOpenPopupDever(false)}>X</button>
+      <h2 className= {style.tituloPop}>Dever de Casa< span className= {style.spanPop} onClick={() => setOpenPopupDever(false)}>X</span></h2>
+       <img src={dever} alt= "Dever de casa" />
       </div>
       <p className={style.textoPopUp}>Todos eles estão com o nome do Fred, nota 100!</p>
     </div>
