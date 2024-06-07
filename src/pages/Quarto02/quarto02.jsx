@@ -57,7 +57,7 @@ export const QuartoBonas = () => {
     </div>
     }
 
-{
+    {
       openPopupCanivete &&
     <div className={style.canivetePopUp}>
       <div className={style.caixaPopUpInterna}>
