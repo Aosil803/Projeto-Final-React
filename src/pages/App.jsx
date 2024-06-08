@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { postUser, getUser } from '../service/usePost';
-import { getConselhoById } from '../service/index.js';
+import { UserProvider } from '../service/userContext';
 import style from './style.module.css';
 import opening from '../assets/republicaLogo.mp4';
 import backGround from '../assets/menuInicial.mp4';
 import icone from '../assets/avatar.gif';
+import { UserContext } from '../service/userContext.jsx';
 
 function App() {
   const [email, setEmail] = useState("");
@@ -16,20 +17,13 @@ function App() {
   const [openForm, setOpenForm] = useState(false);
 
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
   const usuario = {
     email: email,
     senha: senha,
     nickname: nickname
   };
-
-  useEffect(() =>{
-    getConselhoById().
-     then((response) => 
-       console.log(response)).
-      catch((error) => 
-         console.log(error));  
-  }, []); // passar como parametro no pop up
 
   const userExists = async (email, senha) => {
     try {
@@ -63,7 +57,7 @@ function App() {
     e.preventDefault();
     const usuario = await userExists(email, senha);
     if (usuario) {
-      console.log('Usuário encontrado:', usuario);
+      setUser(nickname);
       navigate('../entrada');
     } else {
       setMessage('');
@@ -93,6 +87,7 @@ function App() {
 
   return (
     <>
+     <UserProvider>
       <div className={style.mainContainer}>
         <video className={style.opening} src={opening} autoPlay muted><span className={style.span01}></span></video>
         <span className={style.span01}></span>
@@ -137,6 +132,7 @@ function App() {
           </form>
         }
       </div>
+      </UserProvider>
     </>
   );
 }
