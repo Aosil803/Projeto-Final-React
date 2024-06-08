@@ -25,6 +25,14 @@
   transition:  0.8s ease-in-out;
 }
 
+.intro{
+  position: absolute;
+  top: 15%;
+  left: 12%;
+}
+
+
+
 @keyframes fadeInBackground {
   from { opacity: 0; }
   to { opacity: 1; }

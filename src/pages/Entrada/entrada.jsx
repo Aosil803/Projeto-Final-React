@@ -3,26 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import  Button from '../../components/button'
 import entrada1 from "../../assets/entrada.png"
 import style from "./entrada.module.css";
-import PopUp from '../../components/PopUp/popUp.jsx'
-import retangulo from "../../assets/Retangulo.png"
+import PopUpIntro from '../../components/PopUp/popUpIntro.jsx'
 
 export const Entrada = () => {
-  const [openPopup, setOpenPopup] = useState(false);
+  
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const openTimer = setTimeout(() => {
-      setOpenPopup(true);
-
-      const closeTimer = setTimeout(() => {
-        setOpenPopup(false);
-      }, 5000);
-
-      return () => clearTimeout(closeTimer);
-    }, 3000);
-
-    return () => clearTimeout(openTimer);
-  }, []);
+  const [openPopup, setOpenPopup] = useState(false);
 
   function Corredor() {
     navigate('../corredor');
@@ -34,14 +20,11 @@ export const Entrada = () => {
         </div>
         <Button title="" className={style.portaEntrada} onClick={Corredor}/>
         
-        <PopUp  style={{position:"absolute", top: 150, left: 460}}
-        open={openPopup}
-        onClose={() => setOpenPopup(false)}
-        title="Porteira"
-      >
-        <img src={retangulo} alt="Porteira" />
-      <p>Atrás dela há uma porta trancada.</p>
-      </PopUp>
+        <PopUpIntro  style={{position:"absolute", top: 150, left: 260, width: 400, height: 40}}
+        title=""
+        >
+        <p className={style.intro}>Olá detetive ( nome ), bem vindo(a) a república... </p>
+        </PopUpIntro>
 
     
   </div>
