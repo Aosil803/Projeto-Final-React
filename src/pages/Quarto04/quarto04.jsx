@@ -6,6 +6,8 @@ import home from "../../assets/home.gif"
 import dever from "../../assets/quartoLorencini/dever.png"
 import genshin from "../../assets/quartoLorencini/genshin.png"
 import produtos from "../../assets/quartoLorencini/produtos.png"
+import  Button from '../../components/button'
+import PopUp from '../../components/PopUp/popUp';
 
 export const QuartoLorencini = () => {
 
@@ -22,49 +24,43 @@ export const QuartoLorencini = () => {
       <div>
         <img className={style.quarto04} src={quarto04} alt="Quarto do Lorencini" />
       </div>
-      <button className={style.home} onClick={Home}></button>
+      <Button className={style.home} onClick={Home}/>
       <p className={style.tituloLocal}>Quarto do Lorencini</p>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-    <button className={style.balde} onClick={() => setOpenPopupBalde(!openPopupBalde)}></button>
-    <button className={style.computador} onClick={() => setOpenPopupComputador(!openPopupComputador)}></button>
-    <button className={style.dever} onClick={() => setOpenPopupDever(!openPopupDever)}></button>
+    <Button className={style.balde} onClick={() => setOpenPopupBalde(!openPopupBalde)}/>
+    <Button className={style.computador} onClick={() => setOpenPopupComputador(!openPopupComputador)}/>
+    <Button className={style.dever} onClick={() => setOpenPopupDever(!openPopupDever)}/>
 
-    {
-      openPopupComputador &&
-    <div className={style.computadorPopUp}>
-      <div className={style.caixaPopUpInterna}>
-        <h2 className= {style.tituloPop}>Computador Ligado< span className= {style.spanPop} onClick={() => setOpenPopupComputador(false)}>X</span></h2>
-        <img src={genshin} alt= "Computador" />
-      </div>
-      <p className={style.textoPopUp}>Está aberto em um jogo.</p>
-    </div>
-    }
+    <PopUp  style={{position:"absolute", top: 400, left: 160, width: 250 }}
+        open={openPopupComputador}
+        onClose={() => setOpenPopupComputador(false)}
+        title="Computador Ligado"
+      >
+        <img src={genshin} alt="Computador" />
+      <p>Está aberto em um jogo.</p>
+      </PopUp>
 
-    {
-      openPopupBalde &&
-    <div className={style.baldePopUp}>
-      <div className={style.caixaPopUpInterna}>
-       <h2 className= {style.tituloPop}>Produtos de Limpeza< span className= {style.spanPop} onClick={() => setOpenPopupBalde(false)}>X</span></h2>
-       <img src={produtos} alt= "Produtos de Limpeza" />
-      </div>
-      <p className={style.textoPopUp}>Sabão em pó, água sanitária e desifetante. Estão usados.</p>
-    </div>
-    }
+      <PopUp  style={{position:"absolute", top: 200, left: 590, width: 250 }}
+        open={openPopupBalde}
+        onClose={() => setOpenPopupBalde(false)}
+        title="Produtos de Limpeza"
+      >
+        <img src={produtos} alt="Produtos de Limpeza" />
+      <p>Sabão em pó, água sanitária e desifetante. Estão usados.</p>
+      </PopUp>
 
-{
-      openPopupDever &&
-    <div className={style.deverPopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className= {style.tituloPop}>Dever de Casa< span className= {style.spanPop} onClick={() => setOpenPopupDever(false)}>X</span></h2>
-       <img src={dever} alt= "Dever de casa" />
-      </div>
-      <p className={style.textoPopUp}>Todos eles estão com o nome do Fred, nota 100!</p>
-    </div>
-    }
+      <PopUp  style={{position:"absolute", top: 370, right: 20, width: 250 }}
+        open={openPopupDever}
+        onClose={() => setOpenPopupDever(false)}
+        title="Dever de Casa"
+      >
+        <img src={dever} alt="Dever de Casa" />
+      <p>Todos eles estão com o nome do Fred, nota 100!</p>
+      </PopUp>
 
   </div>
 };

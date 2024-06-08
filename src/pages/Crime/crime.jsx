@@ -5,7 +5,8 @@ import home from "../../assets/home.gif"
 import { useState } from 'react';
 import corte from "../../assets/cenaCrime/corte.png"
 import porta from "../../assets/cenaCrime/porta.png"
-
+import  Button from '../../components/button'
+import PopUp from '../../components/PopUp/popUp.jsx'
 
 export const PortaCrime = () => {
   const navigate = useNavigate();
@@ -17,38 +18,34 @@ export const PortaCrime = () => {
 
   return <div>
       <img className={style.crime} src={crime} alt="cena do crime" />
-      <button className={style.home} onClick={Home}></button>
+      <Button className={style.home} onClick={Home}/>
       <p className={style.tituloLocal}>Cena do Crime</p>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-    <button className={style.ferida} onClick={() => setOpenPopupFerida(!openPopupFerida)}></button>
-    <button className={style.porteira} onClick={() => setOpenPopupPorta(!openPopupPorta)}></button>
+    <Button className={style.ferida} onClick={() => setOpenPopupFerida(!openPopupFerida)}/>
+    <Button className={style.porteira} onClick={() => setOpenPopupPorta(!openPopupPorta)}/>
 
-    {
-      openPopupPorta &&
-    <div className={style.portaPopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Porteira<span className={style.spanPop} onClick={()=> setOpenPopupPorta(false)}>X</span></h2>
+      <PopUp  style={{position:"absolute", top: 150, left: 460}}
+        open={openPopupPorta}
+        onClose={() => setOpenPopupPorta(false)}
+        title="Porteira"
+      >
         <img src={porta} alt="Porteira" />
-      </div>
-      <p className={style.textoPopUp}>Atras dela há uma porta trancada.</p>
-    </div>
-    }
+      <p>Atrás dela há uma porta trancada.</p>
+      </PopUp>
+    
 
-    {
-      openPopupFerida &&
-    <div className={style.feridaPopUp}>
-      <div className={style.caixaPopUpInterna}>
-        <h2 className={style.tituloPop}>Corpo da vítima<span className={style.spanPop} onClick={()=> setOpenPopupFerida(false)}>X</span></h2>
-        <img src={corte} alt="Corpo da vítima" />
-      </div>
-      <p className={style.textoPopUp}>Que horrível! Parece ser um corte, e tem terra em volta dele.</p>
-    </div>
-    }
-
-
+      <PopUp style={{position:"absolute", top: 340, left: 770}}
+        open={openPopupFerida}
+        onClose={() => setOpenPopupFerida(false)}
+        title="Porteira"
+      >
+        <img src={corte} alt="Ferida" />
+      <p>Que horrível! Parece ser um corte, e tem terra em volta dele.</p>
+      </PopUp>
+    
   </div>
 };

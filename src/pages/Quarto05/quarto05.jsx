@@ -6,7 +6,8 @@ import home from "../../assets/home.gif"
 import sangue from "../../assets/quartoMiguel/sangue.png"
 import foice from "../../assets/quartoMiguel/foice.png"
 import crime from "../../assets/quartoMiguel/crime.png"
-
+import  Button from '../../components/button'
+import PopUp from '../../components/PopUp/popUp.jsx'
 
 export const QuartoMiguelito = () => {
   const navigate = useNavigate();
@@ -20,49 +21,42 @@ export const QuartoMiguelito = () => {
 
   return <div>
     <img className={style.quarto05} src={quarto05} alt="Quarto do Miguelito" />
-    <button className={style.home} onClick={Home}></button>
+    <Button className={style.home} onClick={Home}/>
       <p className={style.tituloLocal}>Quarto do Miguelito</p>
         <div className={style.containerIcon}>
           <a href="#" onClick={Home}>
             <img className={style.homeIcon} src={home} alt="icon home" />
           </a>
         </div>
-    <button className={style.brilho} onClick={() => setOpenPopupEvidencia(!openPopupEvidencia)}></button>
-    <button className={style.monitor} onClick={() => setOpenPopupComputador(!openPopupComputador)}></button>
-    <button className={style.sangue} onClick={() => setOpenPopupSangue(!openPopupSangue)}></button>
+    <Button className={style.brilho} onClick={() => setOpenPopupEvidencia(!openPopupEvidencia)}/>
+    <Button className={style.monitor} onClick={() => setOpenPopupComputador(!openPopupComputador)}/>
+    <Button className={style.sangue} onClick={() => setOpenPopupSangue(!openPopupSangue)}/>
 
-    {
-      openPopupSangue &&
-    <div className={style.sanguePopUp}>
-      <div className={style.caixaPopUpInterna}>
-        <h2 className={style.tituloPop}>Isso é Sangue?!<span className={style.spanPop} onClick={()=> setOpenPopupSangue(false)}>X</span></h2>
-        <img src={sangue} alt="Mancha de sangue" />
-      </div>
-      <p className={style.textoPopUp}>O travesseiro e parte do edredom estão com manchas de sangue, o que aconteceu?</p>
-    </div>
-    }
+    <PopUp  style={{position:"absolute", top: 200, left: 340, width:250}}
+        open={openPopupSangue}
+        onClose={() => setOpenPopupSangue(false)}
+        title="Sangue no Travesseiro"
+      >
+        <img src={sangue} alt="sangue em um travesseiro" />
+      <p>O travesseiro e parte do edredom estão com manchas de sangue, o que aconteceu?</p>
+    </PopUp>
 
-    {
-      openPopupEvidencia &&
-    <div className={style.evidenciaPopUp}>
-      <div className={style.caixaPopUpInterna}>
-      <h2 className={style.tituloPop}>Foice de jardim<span className={style.spanPop} onClick={()=> setOpenPopupEvidencia(false)}>X</span></h2>
-        <img src={foice} alt="Foice de jardim" />
-      </div>
-      <p className={style.textoPopUp}>Ela está com cheiro de sabão. </p>
-    </div>
-    }
-
-{
-      openPopupComputador &&
-    <div className={style.computadorPopUp}>
-      <div className={style.caixaPopUpInterna}>
-       <h2 className={style.tituloPop}>Computador Ligado!<span className={style.spanPop} onClick={()=> setOpenPopupComputador(false)}>X</span></h2>
-        <img src={crime} alt="Computador ligado" />
-      </div>
-      <p className={style.textoPopUp}>Está aberto em um site de resenhas de anime.</p>
-    </div>
-    }
-
+    <PopUp  style={{position:"absolute", top: 200, left: 800, width:250}}
+        open={openPopupEvidencia}
+        onClose={() => setOpenPopupEvidencia(false)}
+        title="Foice"
+      >
+        <img src={foice} alt="foice de mão" />
+      <p>Ela está com cheiro de sabão.</p>
+    </PopUp>
+    
+    <PopUp  style={{position:"absolute", top: 200, right: 100, width:250}}
+        open={openPopupComputador}
+        onClose={() => setOpenPopupComputador(false)}
+        title="Computador"
+      >
+        <img src={crime} alt="Computador" />
+      <p>Está aberto em um site de resenhas de anime.</p>
+    </PopUp>
   </div>
 };
