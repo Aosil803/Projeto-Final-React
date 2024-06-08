@@ -131,9 +131,21 @@
   width: 55%;
 }
 
+.containerLupa{
+  position: absolute;
+  background: transparent;
+  bottom: 0;
+  left: 50%;
+}
+
+
+.lupaIcon{
+  width: 18%;
+}
+
 
 
 @keyframes fadeInBackground {
-  from { opacity: 0; } 
+  from { opacity: 0; }
   to { opacity: 1; }
 }
