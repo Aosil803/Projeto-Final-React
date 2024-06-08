@@ -33,3 +33,14 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
+.popupBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeInBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
