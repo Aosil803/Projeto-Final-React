@@ -143,6 +143,22 @@
   width: 18%;
 }
 
+.alexIntroCorredor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.falaAlexInicial{
+  position: absolute;
+  bottom: 8%;
+  left: 30%;
+  width: 50%;
+  color: white;
+  font-size: larger;
+}
+
 
 
 @keyframes fadeInBackground {
