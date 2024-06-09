@@ -139,16 +139,6 @@
     padding: 1%;
   }
 
-  .caixaPopUpInterna{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .caixaPopUpInterna img{
-    width: 70%;
-    background-color: white;
-  }
   .tituloPop span{
     position: absolute;
     top: -4%;

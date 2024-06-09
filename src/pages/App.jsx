@@ -95,7 +95,7 @@ function App() {
         <nav className={style.navBarMenu}>
           <ul className='animate__animated animate__fadeInLeft animate__delay-5s'>
             <div>
-              <li><a href="#" onClick={Entrada}>A República</a></li>
+              <li><p>A República</p></li>
               <p className={style.paragrafo}>Ajude a desvendar um crime</p>
             </div>
           </ul>

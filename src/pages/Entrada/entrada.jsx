@@ -4,24 +4,18 @@ import  Button from '../../components/button'
 import entrada1 from "../../assets/entrada.png"
 import style from "./entrada.module.css";
 import PopUpIntro from '../../components/PopUp/popUpIntro.jsx'
-<<<<<<< Updated upstream
 import { UserContext } from '../../service/userContext.jsx';
-
-export const Entrada = () => {
-  
-  const navigate = useNavigate();
-  const [openPopup, setOpenPopup] = useState(false);
-  const {user} = useContext(UserContext);
-=======
 import introBonas from '../../assets/introImg/bonasImg.png'
 import introAlex from '../../assets/introImg/alexImg.png'
 import introLorencini from '../../assets/introImg/lorenciniImg.png';
 import introMiguelito from '../../assets/introImg/miguelitoImg.png'
 import introYuka from '../../assets/introImg/yukaImg.png'
 import retangulo from '../../assets/Retangulo.png'
-import classNames from 'classnames';
-export const Entrada = () => {
+
   
+  
+export const Entrada = () => {
+  const {user} = useContext(UserContext);
   const navigate = useNavigate();
   const [openPopup01, setOpenPopup01] = useState(false);
   const [openPopup02, setOpenPopup02] = useState(false);
@@ -169,9 +163,6 @@ export const Entrada = () => {
 
     return () => clearTimeout(openTimer);
   }, []);
-
-
->>>>>>> Stashed changes
 
   function Corredor() {
     navigate('../corredor');
