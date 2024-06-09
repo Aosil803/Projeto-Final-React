@@ -81,6 +81,19 @@
   transition:  0.8s ease-in-out;
 }
 
+.bonas{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.bonas img {
+  width: 100%;
+}
+
+
+
   @keyframes fadeInBackground {
     from { opacity: 0; }
     to { opacity: 1; }

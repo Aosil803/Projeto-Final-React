@@ -182,7 +182,7 @@ export const Entrada = () => {
         open={openPopup01}
         title=""
         >
-        <p className={style.intro}>Olá detetive { user }, bem vindo(a) a república... </p>
+        <p className={style.intro}>Olá detetive <strong>{ user }</strong>, bem vindo(a) a república... </p>
         </PopUpIntro>
 
         {/* ---intro02--- */}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import quarto02 from "../../assets/quartoBonas.png"
 import style from "./quarto02.module.css"
@@ -8,17 +8,59 @@ import diario from "../../assets/quartoBonas/diario.png"
 import canivete from "../../assets/quartoBonas/canivete.png"
 import  Button from '../../components/button'
 import PopUp from '../../components/PopUp/popUp.jsx'
+import BonasNormal from '../../assets/dialogo/BonasNormal.png'
+import BonasChateado from '../../assets/dialogo/BonasChateado.png'
+import BonasSerio from '../../assets/dialogo/BonasSerio.png'
 
 
 export const QuartoBonas = () => {
   const [openPopupLapTop ,setOpenPopupLapTop] = useState(false)
   const [openPopupLivro ,setOpenPopupLivro] = useState(false)
   const [openPopupCanivete ,setOpenPopupCanivete] = useState(false)
+  const [showBonasNormal, setShowBonasNormal] = useState(false);
+  const [showBonasSerio, setShowBonasSerio] = useState(false);
+  const [showBonasChateado, setShowBonasChateado] = useState(false);
   const navigate = useNavigate();
 
   function Home() {
     navigate('../corredor');
   }
+
+  useEffect(() => {
+    let timer;
+    if (openPopupCanivete) {
+      timer = setTimeout(() => {
+        setShowBonasNormal(true);
+      }, 2000);
+    } else {
+      setShowBonasNormal(false);
+    }
+    return () => clearTimeout(timer);
+  }, [openPopupCanivete]);
+
+  useEffect(() => {
+    let timer;
+    if (openPopupLivro) {
+      timer = setTimeout(() => {
+        setShowBonasSerio(true);
+      }, 2000);
+    } else {
+      setShowBonasSerio(false);
+    }
+    return () => clearTimeout(timer);
+  }, [openPopupLivro]);
+
+  useEffect(() => {
+    let timer;
+    if (openPopupLapTop) {
+      timer = setTimeout(() => {
+        setShowBonasChateado(true);
+      }, 2000);
+    } else {
+      setShowBonasChateado(false);
+    }
+    return () => clearTimeout(timer);
+  }, [openPopupLapTop]);
 
 
   return <div>
@@ -45,7 +87,7 @@ export const QuartoBonas = () => {
       <p>Não está ligando. O teclado está com água.</p>
       </PopUp>
 
-      <PopUp  style={{position:"absolute", top: 420, left: 400, width: 250}}
+      <PopUp  style={{position:"absolute", top: 200, left: 400, width: 250}}
         open={openPopupLivro}
         onClose={() => setOpenPopupLivro(false)}
         title="Diário Pessoal"
@@ -54,7 +96,7 @@ export const QuartoBonas = () => {
         <p>"Que ódio que me dá quando isso acontece!"..."Será que foi necessário?"</p>
       </PopUp>
 
-      <PopUp  style={{position:"absolute", top: 320, right: 1, width: 250}}
+      <PopUp  style={{position:"absolute", top: 200, right: 1, width: 250}}
         open={openPopupCanivete}
         onClose={() => setOpenPopupCanivete(false)}
         title="Canivete Suiço"
@@ -63,5 +105,16 @@ export const QuartoBonas = () => {
         <p>Um canivete aparentemente novo, poucas marcas de uso. Parece ter uma linha presa na lâmina.</p>
       </PopUp>
 
+      {showBonasNormal && (
+        <img className={style.bonas} src={BonasNormal} alt="Bonas Normal" />
+      )}
+
+      {showBonasSerio && (
+        <img className={style.bonas} src={BonasSerio} alt="" />
+      )}
+
+      {showBonasChateado && (
+        <img className={style.bonas} src={BonasChateado} alt="" />
+      )}
   </div>
 };
