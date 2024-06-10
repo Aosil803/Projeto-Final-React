@@ -12,10 +12,6 @@ import introLorencini from '../../assets/introImg/lorenciniImg.png';
 import introMiguelito from '../../assets/introImg/miguelitoImg.png'
 import introYuka from '../../assets/introImg/yukaImg.png'
 import retangulo from '../../assets/Retangulo.png'
-<<<<<<< Updated upstream
-import { useContador } from '../../service/userContextTimer.jsx';
-=======
->>>>>>> Stashed changes
 
 export const Entrada = () => {
   const { user } = useContext(UserContext);
