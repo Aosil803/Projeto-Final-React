@@ -154,6 +154,24 @@
   padding: 1%;
 }
 
+.yuka{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.yuka img {
+  width: 100%;
+}
+
+.yukaTexto{
+  position: absolute;
+  bottom: 15%;
+  left: 40%;
+  color: white;
+}
+
 @keyframes fadeInBackground {
   from { opacity: 0; }
   to { opacity: 1; }

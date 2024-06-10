@@ -92,6 +92,13 @@
   width: 100%;
 }
 
+.bonasLivro{
+  position: absolute;
+  bottom: 15%;
+  left: 40%;
+  color: white;
+}
+
 
 
   @keyframes fadeInBackground {

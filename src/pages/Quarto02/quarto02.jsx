@@ -93,7 +93,7 @@ export const QuartoBonas = () => {
         title="Diário Pessoal"
       >
         <img src={diario} alt="Diário" />
-        <p>"Que ódio que me dá quando isso acontece!"..."Será que foi necessário?"</p>
+        <p>"Que ódio que me dá quando isso acontece!"... <br /> "Será que foi necessário?"</p>
       </PopUp>
 
       <PopUp  style={{position:"absolute", top: 200, right: 1, width: 250}}
@@ -106,15 +106,25 @@ export const QuartoBonas = () => {
       </PopUp>
 
       {showBonasNormal && (
-        <img className={style.bonas} src={BonasNormal} alt="Bonas Normal" />
+        <div>
+          <img className={style.bonas} src={BonasNormal} alt="Bonas Normal" />
+          <p className={style.bonasLivro}>Ele é novinho. Emprestei para a Yuka ontem.
+          Ela parecia estar muito irritada!</p>
+        </div>
       )}
 
       {showBonasSerio && (
-        <img className={style.bonas} src={BonasSerio} alt="" />
+        <div>
+          <img className={style.bonas} src={BonasSerio} alt="" />
+          <p className={style.bonasLivro}>PORQUE ESTÁ VENDO ISSO??</p>
+        </div>
       )}
 
       {showBonasChateado && (
-        <img className={style.bonas} src={BonasChateado} alt="" />
+        <div>
+          <img className={style.bonas} src={BonasChateado} alt="" />
+          <p className={style.bonasLivro}>Três dias atrás, Fred simplesmente pegou ele e me devolveu assim. <br /> Desde então, estou indo até a empresa trabalhar, já que ele quebrou meu notebook de trabalho. <br /> Eu ainda estou puto com essa situação, estou todo atrasado!</p>
+        </div>
       )}
   </div>
 };

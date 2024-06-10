@@ -158,3 +158,21 @@
 .textoPopUp span::after{
   content: '"';
 }
+
+.Alex{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.Alex img {
+  width: 100%;
+}
+
+.alexTexto{
+  position: absolute;
+  bottom: 15%;
+  left: 40%;
+  color: white;
+}
