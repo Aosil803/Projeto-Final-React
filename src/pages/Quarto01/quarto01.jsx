@@ -12,6 +12,8 @@ import AlexNormal from '../../assets/dialogo/AlexNormal.png'
 import AlexSerio from '../../assets/dialogo/AlexSerio.png'
 import AlexTriste from '../../assets/dialogo/AlexTriste.png'
 import { useContador } from '../../service/userContextTimer.jsx';
+import relogio from '../../assets/contagemTempo.gif'
+
 
 export const QuartoAlex = () => {
   const navigate = useNavigate();
@@ -136,10 +138,13 @@ export const QuartoAlex = () => {
     )}
 
     <div className={style.contadorRegressivo}>
-        <span>{minutos.toString().padStart(2, "0")}</span>
-        <span>:</span>
-        <span>{segundos.toString().padStart(2, "0")}</span>
-    </div>
+        <img src={relogio} alt="" />
+        <div>
+          <span>{minutos.toString().padStart(2, "0")}</span>
+          <span>:</span>
+          <span>{segundos.toString().padStart(2, "0")}</span>
+        </div>
+      </div>
 
   </div>
 };

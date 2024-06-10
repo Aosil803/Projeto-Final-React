@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useContador } from '../../service/userContextTimer.jsx';
 import quarto05 from "../../assets/quartoMiguelito.png"
 import style from "./quarto05.module.css"
 import home from "../../assets/home.gif"
@@ -11,8 +12,7 @@ import PopUp from '../../components/PopUp/popUp.jsx'
 import MiguNormal from '../../assets/dialogo/MiguNormal.png'
 import MiguSerio from '../../assets/dialogo/MiguSerio.png'
 import MiguPreocupado from '../../assets/dialogo/MiguPreocupado.png'
-import { useContador } from '../../service/userContextTimer.jsx';
-
+import relogio from '../../assets/contagemTempo.gif'
 
 
 export const QuartoMiguelito = () => {
@@ -133,10 +133,14 @@ export const QuartoMiguelito = () => {
         </div>
       )}
 
-      <div className={style.contadorRegressivo}>
-        <span>{minutos.toString().padStart(2, "0")}</span>
-        <span>:</span>
-        <span>{segundos.toString().padStart(2, "0")}</span>
+<div className={style.contadorRegressivo}>
+        <img src={relogio} alt="" />
+        <div>
+          <span>{minutos.toString().padStart(2, "0")}</span>
+          <span>:</span>
+          <span>{segundos.toString().padStart(2, "0")}</span>
+        </div>
       </div>
+
   </div>
 };

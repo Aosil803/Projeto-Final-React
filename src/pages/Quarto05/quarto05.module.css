@@ -175,9 +175,21 @@
 .contadorRegressivo{
   position: absolute;
   top: 0;
-  left: 0;
-  width: 200px;
+  left: 46%;
+  width: 4.5%;
+  display: flex;
+  background: white;
+  margin-top: 5px;
+  padding: 1%;
+  border-radius: 4px;
 }
+
+.contadorRegressivo img {
+  width: 16px;
+  height: 16px;
+  padding-right: 5px;
+}
+
 
 @keyframes fadeInBackground {
   from { opacity: 0; }

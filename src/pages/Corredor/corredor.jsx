@@ -11,6 +11,8 @@ import lupa from "../../assets/lupa.gif";
 import carro from '../../assets/carro.gif';
 import Button from '../../components/button.jsx';
 import alexCorredor from '../../assets/dialogo/AlexNormal.png';
+import relogio from '../../assets/contagemTempo.gif'
+
 
 import bonasAcusacao from '../../assets/IconesAcusacao/BonasAcusacao.png';
 import alexAcusacao from '../../assets/IconesAcusacao/AlexAcusacao.png';
@@ -92,9 +94,12 @@ export const Corredor = () => {
       </div>
       
       <div className={style.contadorRegressivo}>
-        <span>{minutos.toString().padStart(2, "0")}</span>
-        <span>:</span>
-        <span>{segundos.toString().padStart(2, "0")}</span>
+        <img src={relogio} alt="" />
+        <div>
+          <span>{minutos.toString().padStart(2, "0")}</span>
+          <span>:</span>
+          <span>{segundos.toString().padStart(2, "0")}</span>
+        </div>
       </div>
 
 

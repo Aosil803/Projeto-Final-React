@@ -1,13 +1,14 @@
+import { useContador } from '../../service/userContextTimer.jsx';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import crime from "../../assets/cenaCrime.png"
 import style from "./crime.module.css"
 import home from "../../assets/home.gif"
-import { useState } from 'react';
 import corte from "../../assets/cenaCrime/corte.png"
 import porta from "../../assets/cenaCrime/porta.png"
 import  Button from '../../components/button'
 import PopUp from '../../components/PopUp/popUp.jsx'
-import { useContador } from '../../service/userContextTimer.jsx';
+import relogio from '../../assets/contagemTempo.gif'
 
 export const PortaCrime = () => {
   const navigate = useNavigate();
@@ -58,6 +59,13 @@ export const PortaCrime = () => {
         <span>{segundos.toString().padStart(2, "0")}</span>
       </div>
 
-
+      <div className={style.contadorRegressivo}>
+        <img src={relogio} alt="" />
+        <div>
+          <span>{minutos.toString().padStart(2, "0")}</span>
+          <span>:</span>
+          <span>{segundos.toString().padStart(2, "0")}</span>
+        </div>
+      </div>
   </div>
 };

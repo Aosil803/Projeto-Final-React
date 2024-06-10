@@ -12,6 +12,7 @@ import YukaNormal from '../../assets/dialogo/YukaNormal.png'
 import YukaSeria from '../../assets/dialogo/YukaNormal.png'
 import YukaMedo from '../../assets/dialogo/YukaMedo.png'
 import { useContador } from '../../service/userContextTimer.jsx';
+import relogio from '../../assets/contagemTempo.gif'
 
 export const QuartoYuka = () => {
   const { tempoTotal } = useContador();
@@ -134,11 +135,16 @@ export const QuartoYuka = () => {
           <p className={style.yukaTexto}><strong>Está desconfiando de mim por acaso?!</strong></p>
         </div>
       )}
+      
       <div className={style.contadorRegressivo}>
-        <span>{minutos.toString().padStart(2, "0")}</span>
-        <span>:</span>
-        <span>{segundos.toString().padStart(2, "0")}</span>
+        <img src={relogio} alt="" />
+        <div>
+          <span>{minutos.toString().padStart(2, "0")}</span>
+          <span>:</span>
+          <span>{segundos.toString().padStart(2, "0")}</span>
+        </div>
       </div>
+
 
   </div>
 };

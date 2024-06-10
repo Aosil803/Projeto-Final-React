@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useContador } from '../../service/userContextTimer.jsx';
 import quarto02 from "../../assets/quartoBonas.png"
 import style from "./quarto02.module.css"
 import home from "../../assets/home.gif"
@@ -11,7 +12,7 @@ import PopUp from '../../components/PopUp/popUp.jsx'
 import BonasNormal from '../../assets/dialogo/BonasNormal.png'
 import BonasChateado from '../../assets/dialogo/BonasChateado.png'
 import BonasSerio from '../../assets/dialogo/BonasSerio.png'
-import { useContador } from '../../service/userContextTimer.jsx';
+import relogio from '../../assets/contagemTempo.gif'
 
 export const QuartoBonas = () => {
   const [openPopupLapTop ,setOpenPopupLapTop] = useState(false)
@@ -131,10 +132,14 @@ export const QuartoBonas = () => {
       )}
       
       <div className={style.contadorRegressivo}>
-        <span>{minutos.toString().padStart(2, "0")}</span>
-        <span>:</span>
-        <span>{segundos.toString().padStart(2, "0")}</span>
+        <img src={relogio} alt="" />
+        <div>
+          <span>{minutos.toString().padStart(2, "0")}</span>
+          <span>:</span>
+          <span>{segundos.toString().padStart(2, "0")}</span>
+        </div>
       </div>
+
 
   </div>
 };

@@ -162,8 +162,9 @@
 .contadorRegressivo{
   position: absolute;
   top: 0;
-  left: 50%;
-  background-color: white;
+  left: 46%;
+  display: flex;
+  background: white;
   margin-top: 5px;
   padding: 1%;
   border-radius: 4px;
@@ -222,6 +223,14 @@
 .imgAcusacao:hover {
   filter: brightness(1);
 }
+
+.contadorRegressivo img {
+  width: 16px;
+  height: 16px;
+  padding-right: 5px;
+}
+
+
 
 
 @keyframes fadeInBackground {
