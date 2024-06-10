@@ -17,7 +17,7 @@ import ErrorPage from './src/Error/erro.jsx';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { UserProvider } from './src/service/userContext.jsx'
-
+import { ContadorProvider } from './src/service/userContextTimer.jsx'; // Adicione esta linha
 
 const router = createBrowserRouter([
   {
@@ -62,8 +62,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <UserProvider>
-      <RouterProvider router={router} />
-      <ToastContainer />
-     </UserProvider>
+      <ContadorProvider> {/* Adicione esta linha */}
+        <RouterProvider router={router} />
+        <ToastContainer />
+      </ContadorProvider> {/* E esta linha */}
+    </UserProvider>
   </React.StrictMode>,
-)
+);

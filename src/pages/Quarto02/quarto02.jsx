@@ -11,7 +11,7 @@ import PopUp from '../../components/PopUp/popUp.jsx'
 import BonasNormal from '../../assets/dialogo/BonasNormal.png'
 import BonasChateado from '../../assets/dialogo/BonasChateado.png'
 import BonasSerio from '../../assets/dialogo/BonasSerio.png'
-
+import { useContador } from '../../service/userContextTimer.jsx';
 
 export const QuartoBonas = () => {
   const [openPopupLapTop ,setOpenPopupLapTop] = useState(false)
@@ -21,6 +21,9 @@ export const QuartoBonas = () => {
   const [showBonasSerio, setShowBonasSerio] = useState(false);
   const [showBonasChateado, setShowBonasChateado] = useState(false);
   const navigate = useNavigate();
+  const { tempoTotal } = useContador();
+  const minutos = Math.floor(tempoTotal / 60);
+  const segundos = tempoTotal % 60;
 
   function Home() {
     navigate('../corredor');
@@ -126,5 +129,12 @@ export const QuartoBonas = () => {
           <p className={style.bonasLivro}>Três dias atrás, Fred simplesmente pegou ele e me devolveu assim. <br /> Desde então, estou indo até a empresa trabalhar, já que ele quebrou meu notebook de trabalho. <br /> Eu ainda estou puto com essa situação, estou todo atrasado!</p>
         </div>
       )}
+      
+      <div className={style.contadorRegressivo}>
+        <span>{minutos.toString().padStart(2, "0")}</span>
+        <span>:</span>
+        <span>{segundos.toString().padStart(2, "0")}</span>
+      </div>
+
   </div>
 };

@@ -63,6 +63,14 @@
   transition:  0.8s ease-in-out;
 }
 
+.contadorRegressivo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+}
+
+
 @keyframes fadeInBackground {
     from { opacity: 0; }
     to { opacity: 1; }

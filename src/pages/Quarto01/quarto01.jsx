@@ -11,7 +11,7 @@ import PopUp from '../../components/PopUp/popUp.jsx'
 import AlexNormal from '../../assets/dialogo/AlexNormal.png'
 import AlexSerio from '../../assets/dialogo/AlexSerio.png'
 import AlexTriste from '../../assets/dialogo/AlexTriste.png'
-
+import { useContador } from '../../service/userContextTimer.jsx';
 
 export const QuartoAlex = () => {
   const navigate = useNavigate();
@@ -21,7 +21,10 @@ export const QuartoAlex = () => {
   const [showAlexNormal, setShowAlexNormal] = useState(false);
   const [showAlexSerio, setShowAlexSerio] = useState(false);
   const [showAlexTriste, setShowAlexTriste] = useState(false);
-
+  const { tempoTotal } = useContador();
+  const minutos = Math.floor(tempoTotal / 60);
+    const segundos = tempoTotal % 60;
+  
 
   useEffect(() => {
     let timer;
@@ -131,6 +134,12 @@ export const QuartoAlex = () => {
           <p className={style.alexTexto}>Eu e Fred disputávamos por esse terreno há anos, <br /> supostamente, ele herdou... Para mim, é só um monte de baboseira, sempre foi meu!</p>
         </div>
     )}
+
+    <div className={style.contadorRegressivo}>
+        <span>{minutos.toString().padStart(2, "0")}</span>
+        <span>:</span>
+        <span>{segundos.toString().padStart(2, "0")}</span>
+    </div>
 
   </div>
 };

@@ -159,6 +159,16 @@
   font-size: larger;
 }
 
+.contadorRegressivo{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: white;
+  margin-top: 5px;
+  padding: 1%;
+  border-radius: 4px;
+}
+
 
 
 @keyframes fadeInBackground {

@@ -11,7 +11,7 @@ import PopUp from '../../components/PopUp/popUp.jsx'
 import MiguNormal from '../../assets/dialogo/MiguNormal.png'
 import MiguSerio from '../../assets/dialogo/MiguSerio.png'
 import MiguPreocupado from '../../assets/dialogo/MiguPreocupado.png'
-
+import { useContador } from '../../service/userContextTimer.jsx';
 
 
 
@@ -23,7 +23,10 @@ export const QuartoMiguelito = () => {
   const [showMiguNormal, setShowMiguNormal] = useState(false);
   const [showMiguSerio, setShowMiguSerio] = useState(false);
   const [showMiguPreocupado, setShowMiguPreocupado] = useState(false);
-
+  const { tempoTotal } = useContador();
+  const minutos = Math.floor(tempoTotal / 60);
+  const segundos = tempoTotal % 60;
+  
 
   useEffect(() => {
     let timer;
@@ -60,14 +63,6 @@ export const QuartoMiguelito = () => {
     }
     return () => clearTimeout(timer);
   }, [openPopupEvidencia]);
-
-
-
-
-
-
-
-
 
   function Home() {
     navigate('../corredor');
@@ -138,5 +133,10 @@ export const QuartoMiguelito = () => {
         </div>
       )}
 
+      <div className={style.contadorRegressivo}>
+        <span>{minutos.toString().padStart(2, "0")}</span>
+        <span>:</span>
+        <span>{segundos.toString().padStart(2, "0")}</span>
+      </div>
   </div>
 };

@@ -11,8 +11,14 @@ import introLorencini from '../../assets/introImg/lorenciniImg.png';
 import introMiguelito from '../../assets/introImg/miguelitoImg.png'
 import introYuka from '../../assets/introImg/yukaImg.png'
 import retangulo from '../../assets/Retangulo.png'
+<<<<<<< Updated upstream
 
 
+=======
+import { useContador } from '../../service/userContextTimer.jsx';
+  
+  
+>>>>>>> Stashed changes
 export const Entrada = () => {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -25,7 +31,12 @@ export const Entrada = () => {
   const [openPopup07, setOpenPopup07] = useState(false);
   const [openPopup08, setOpenPopup08] = useState(false);
   const [openPopup09, setOpenPopup09] = useState(false);
+  const { setTempoTotal } = useContador();
 
+  const iniciarContador = () => {
+    setTempoTotal(5 * 60); // Defina o tempo desejado
+    navigate('/corredor');
+  };
 
   {/* ---timers do popUp--- */ }
   {/* ---popUp01--- */ }
@@ -168,10 +179,46 @@ export const Entrada = () => {
   }
 
   return <div>
+<<<<<<< Updated upstream
     <div>
       <img className={style.entrada} src={entrada1} alt="frente de uma casa" />
     </div>
     <Button title="" className={style.portaEntrada} onClick={Corredor} />
+=======
+        <div>
+          <img className={style.entrada} src={entrada1} alt="frente de uma casa" />
+        </div>
+        <Button title="" className={style.portaEntrada} onClick={iniciarContador}/>
+        
+        
+        
+        
+        {/* ---inicio da intro--- */}
+        <PopUpIntro  style={{position:"absolute", top: 150, left: 260, width: 400, height: 40}}
+        open={openPopup01}
+        title=""
+        >
+        <p className={style.intro}>Olá detetive <strong>{ user }</strong>, bem vindo(a) a república... </p>
+        </PopUpIntro>
+
+        {/* ---intro02--- */}
+        <PopUpIntro  style={{position:"absolute", top: 250, right: 260, width: 400, height: 120}}
+        open={openPopup02}
+        title=""
+        >
+        <p className={style.intro}>Você foi contratado para investigar o assassinato de Frederico Sheremetieff. O corpo foi encontrado hoje às 06:45 por uma moradora local. A área está isolada e os suspeitos estão dentro da casa.</p>
+        </PopUpIntro>
+
+        {/* ---intro03--- */}
+        <PopUpIntro  style={{position:"absolute", top: 420, right: 110, width: 340, height: 130}}
+        open={openPopup03}
+        title=""
+        >
+        <p className={style.intro03}>Sabe o que é engraçado? Todos os suspeitos não gostavam nem um pouco da vítima...
+        Mas enfim, vamos ao que interessa!!
+        Você tem total liberdade para explorar a casa. Os suspeitos já estão cientes disso, porém, gostaria de introduzi-los a você antes.</p>
+        </PopUpIntro>
+>>>>>>> Stashed changes
 
 
     {/* ---inicio da intro--- */}

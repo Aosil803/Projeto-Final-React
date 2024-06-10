@@ -1,3 +1,4 @@
+import { useContador } from '../../service/userContextTimer.jsx';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -12,8 +13,12 @@ import alexCorredor from '../../assets/dialogo/AlexNormal.png';
 
 export const Corredor = () => {
   const { user } = useContext(UserContext);
+  const { tempoTotal } = useContador();
   const navigate = useNavigate();
+  const minutos = Math.floor(tempoTotal / 60);
+  const segundos = tempoTotal % 60;
 
+  
   const [mostrarApresentacao, setMostrarApresentacao] = useState(() => {
     const valorArmazenado = localStorage.getItem('mostrarApresentacaoCorredor');
     return valorArmazenado === null ? true : JSON.parse(valorArmazenado);
@@ -71,6 +76,13 @@ export const Corredor = () => {
           <img className={style.lupaIcon} src={lupa} alt="icon Lupa" />
         </a>
       </div>
+      
+      <div className={style.contadorRegressivo}>
+        <span>{minutos.toString().padStart(2, "0")}</span>
+        <span>:</span>
+        <span>{segundos.toString().padStart(2, "0")}</span>
+      </div>
+
 
       {mostrarApresentacao && (
         <div className={style.apresentacao}>

@@ -7,11 +7,16 @@ import corte from "../../assets/cenaCrime/corte.png"
 import porta from "../../assets/cenaCrime/porta.png"
 import  Button from '../../components/button'
 import PopUp from '../../components/PopUp/popUp.jsx'
+import { useContador } from '../../service/userContextTimer.jsx';
 
 export const PortaCrime = () => {
   const navigate = useNavigate();
   const [openPopupPorta ,setOpenPopupPorta] = useState(false)
   const [openPopupFerida ,setOpenPopupFerida] = useState(false)
+  const { tempoTotal } = useContador();
+  const minutos = Math.floor(tempoTotal / 60);
+  const segundos = tempoTotal % 60;
+
   function Home() {
     navigate('../corredor');
   }
@@ -46,6 +51,13 @@ export const PortaCrime = () => {
         <img src={corte} alt="Ferida" />
       <p>Que horrível! Parece ser um corte, e tem terra em volta dele.</p>
       </PopUp>
-    
+
+      <div className={style.contadorRegressivo}>
+        <span>{minutos.toString().padStart(2, "0")}</span>
+        <span>:</span>
+        <span>{segundos.toString().padStart(2, "0")}</span>
+      </div>
+
+
   </div>
 };
