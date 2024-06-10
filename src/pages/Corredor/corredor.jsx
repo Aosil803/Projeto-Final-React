@@ -8,10 +8,19 @@ import corredor from "../../assets/corredor.png";
 import style from "./corredor.module.css";
 import home from "../../assets/home.gif";
 import lupa from "../../assets/lupa.gif";
+import carro from '../../assets/carro.gif';
 import Button from '../../components/button.jsx';
 import alexCorredor from '../../assets/dialogo/AlexNormal.png';
 
+import bonasAcusacao from '../../assets/IconesAcusacao/BonasAcusacao.png';
+import alexAcusacao from '../../assets/IconesAcusacao/AlexAcusacao.png';
+import lorenAcusacao from '../../assets/IconesAcusacao/LorenciniAcusacao.png';
+import miguelitoAcusacao from '../../assets/IconesAcusacao/MiguelitoAcusacao.png';
+import yukaAcusacao from '../../assets/IconesAcusacao/YukaAcusacao.png';
+
+
 export const Corredor = () => {
+  const [openAcusacao, setOpenAcusacao] = useState(false);
   const { user } = useContext(UserContext);
   const { tempoTotal } = useContador();
   const navigate = useNavigate();
@@ -41,13 +50,13 @@ export const Corredor = () => {
   const PortaYuka = () => navigate('../quartoYuka');
   const PortaMiguelito = () => navigate('../quartoMiguelito');
   const PortaLorencini = () => navigate('../quartoLorencini');
-  
+
   const Home = () => navigate('../corredor');
 
   const mostraConselho = async () => {
     try {
       const conselho = await getConselhoById();
-      toast.success(conselho.data.slip.advice); // necessário entrar em cada parte do retorno da api pra pegar advice
+      toast.success(conselho.data.slip.advice);
     } catch (error) {
       console.error(error);
     }
@@ -65,6 +74,11 @@ export const Corredor = () => {
       <Button className={style.portaYuka} onClick={PortaYuka} />
       <Button className={style.portaMiguelito} onClick={PortaMiguelito} />
       <Button className={style.portaLorencini} onClick={PortaLorencini} />
+      <div className={style.containerCarro}>
+        <a href="#" onClick={() => setOpenAcusacao(!openAcusacao)}>
+          <img className={style.carroIcon} src={carro} alt="icon carro" />
+        </a>
+      </div>
       <Button className={style.home} onClick={Home} />
       <div className={style.containerIcon}>
         <a href="#" onClick={Home}>
@@ -84,9 +98,34 @@ export const Corredor = () => {
       </div>
 
 
+      {openAcusacao && (
+          <div className={style.popUpAcusacao}>
+            <p className={style.tituloAcusacao}>
+              Quem foi o assassino?
+            </p>
+            <div className={style.containerImgAcusacao}>
+              <a href="#" onClick={Home}>
+              <img src={bonasAcusacao} className={style.imgAcusacao} />
+              </a>
+              <a href="#" onClick={Home}>
+              <img src={alexAcusacao} className={style.imgAcusacao} />
+              </a>
+              <a href="#" onClick={Home}>
+              <img src={lorenAcusacao} className={style.imgAcusacao} />
+              </a>
+              <a href="#" onClick={Home}>
+              <img src={miguelitoAcusacao} className={style.imgAcusacao} />
+              </a>
+              <a href="#" onClick={Home}>
+              <img src={yukaAcusacao} className={style.imgAcusacao} />
+              </a>
+            </div>
+          </div>
+      )}
+
       {mostrarApresentacao && (
         <div className={style.apresentacao}>
-          <img className={style.alexIntroCorredor} src={alexCorredor} alt="" />
+          <img className={style.alexIntroCorredor} src={alexCorredor} alt="Alex no corredor" />
           <div className={style.falaAlexInicial}>
             <p>Olá, detetive <strong>{user}</strong>. Seja bem-vindo(a), sou Alex, dono desta república. O delegado já nos avisou sobre sua visita...
               Fique à vontade para investigar. Mesmo não gostando muito da vítima, vamos tentar cooperar o máximo possível!
