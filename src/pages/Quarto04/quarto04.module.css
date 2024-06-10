@@ -81,6 +81,29 @@
   transition:  0.8s ease-in-out;
 }
 
+.LorenSorrindo{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.LorenSorrindo img {
+  width: 100%;
+}
+
+.loren{
+  position: absolute;
+  bottom: 15%;
+  left: 40%;
+  color: white;
+}
+
+
+
+
+
+
 @keyframes fadeInBackground {
   from { opacity: 0; }
   to { opacity: 1; }

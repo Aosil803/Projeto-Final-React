@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import quarto05 from "../../assets/quartoMiguelito.png"
 import style from "./quarto05.module.css"
 import home from "../../assets/home.gif"
@@ -8,12 +8,66 @@ import foice from "../../assets/quartoMiguel/foice.png"
 import crime from "../../assets/quartoMiguel/crime.png"
 import  Button from '../../components/button'
 import PopUp from '../../components/PopUp/popUp.jsx'
+import MiguNormal from '../../assets/dialogo/MiguNormal.png'
+import MiguSerio from '../../assets/dialogo/MiguSerio.png'
+import MiguPreocupado from '../../assets/dialogo/MiguPreocupado.png'
+
+
+
 
 export const QuartoMiguelito = () => {
   const navigate = useNavigate();
   const [openPopupSangue ,setOpenPopupSangue] = useState(false)
   const [openPopupEvidencia ,setOpenPopupEvidencia] = useState(false)
   const [openPopupComputador ,setOpenPopupComputador] = useState(false)
+  const [showMiguNormal, setShowMiguNormal] = useState(false);
+  const [showMiguSerio, setShowMiguSerio] = useState(false);
+  const [showMiguPreocupado, setShowMiguPreocupado] = useState(false);
+
+
+  useEffect(() => {
+    let timer;
+    if (openPopupSangue) {
+      timer = setTimeout(() => {
+        setShowMiguNormal(true);
+      }, 2000);
+    } else {
+      setShowMiguNormal(false);
+    }
+    return () => clearTimeout(timer);
+  }, [openPopupSangue]);
+
+  useEffect(() => {
+    let timer;
+    if (openPopupComputador) {
+      timer = setTimeout(() => {
+        setShowMiguSerio(true);
+      }, 2000);
+    } else {
+      setShowMiguSerio(false);
+    }
+    return () => clearTimeout(timer);
+  }, [openPopupComputador]);
+
+  useEffect(() => {
+    let timer;
+    if (openPopupEvidencia) {
+      timer = setTimeout(() => {
+        setShowMiguPreocupado(true);
+      }, 2000);
+    } else {
+      setShowMiguPreocupado(false);
+    }
+    return () => clearTimeout(timer);
+  }, [openPopupEvidencia]);
+
+
+
+
+
+
+
+
 
   function Home() {
     navigate('../corredor');
@@ -32,7 +86,7 @@ export const QuartoMiguelito = () => {
     <Button className={style.monitor} onClick={() => setOpenPopupComputador(!openPopupComputador)}/>
     <Button className={style.sangue} onClick={() => setOpenPopupSangue(!openPopupSangue)}/>
 
-    <PopUp  style={{position:"absolute", top: 200, left: 340, width:250}}
+    <PopUp  style={{position:"absolute", top: 200, left: 380, width:250}}
         open={openPopupSangue}
         onClose={() => setOpenPopupSangue(false)}
         title="Sangue no Travesseiro"
@@ -56,7 +110,33 @@ export const QuartoMiguelito = () => {
         title="Computador"
       >
         <img src={crime} alt="Computador" />
-      <p>Está aberto em um site de resenhas de anime.</p>
+      <p>Está aberto em um site de resenhas de anime... <br />
+      ...parece que o Fred gostava de anime...</p>
     </PopUp>
+
+    {showMiguNormal && (
+        <div>
+          <img className={style.miguelito} src={MiguNormal} alt="Bonas Normal" />
+          <p className={style.miguel}>Meu nariz sangrou enquanto dormia, pode conferir o DNA esse sangue é meu,
+          A Yuka até me ajudou!
+          </p>
+        </div>
+      )}
+    {showMiguSerio && (
+        <div>
+          <img className={style.miguelito} src={MiguSerio} alt="Miguel Serio" />
+          <p className={style.miguel}><strong>ESSA CONTA DO FRED DEVERIA SER CONSIDERADA CRIMINOSA....</strong>
+          </p>
+        </div>
+      )}
+
+      {showMiguPreocupado && (
+        <div>
+          <img className={style.miguelito} src={MiguPreocupado} alt="Miguel Preocupado" />
+          <p className={style.miguel}>O que é isso? <br />  sei por que ela está aí! Deve ser algo do Alex.
+          </p>
+        </div>
+      )}
+
   </div>
 };
