@@ -72,6 +72,13 @@
   text-align: center;
 }
 
+.volumeLabel{
+  position: fixed;
+  top: 20px;
+  right: 80px;
+  z-index: 1000;
+}
+
 .formContainer{
   position: absolute;
   top: 20%;

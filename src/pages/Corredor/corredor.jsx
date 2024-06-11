@@ -56,13 +56,14 @@ export const Corredor = () => {
   const mostraConselho = async () => {
     try {
       const conselho = await getConselhoById();
-      toast.warning(conselho.data.slip.advice);
+      toast.info(conselho.data.slip.advice); // necessário entrar em cada parte do retorno da api pra pegar advice
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
+    
     <div>
       <div>
         <img className={style.corredor} src={corredor} alt="corredor de uma casa" />
