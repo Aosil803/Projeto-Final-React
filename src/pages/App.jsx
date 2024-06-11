@@ -30,12 +30,12 @@ export const App = () => {
     nickname: nickname
   };
 
-  
+
   useEffect(() => {
     const sound = new Howl({
       src: ['./src/assets/audio/background-audio.mp3'],
-      loop: false, 
-      onend: function() {
+      loop: false,
+      onend: function () {
         setTimeout(() => {
           sound.fade(0, 1, fadeDuration);
           sound.play();
@@ -69,7 +69,7 @@ export const App = () => {
       const usuarios = response.data;
       const usuario = usuarios.find((usuario) => usuario.email === email && usuario.senha === senha);
 
-      console.log("Usuário encontrado: ", usuario); 
+      console.log("Usuário encontrado: ", usuario);
 
       return usuario ? true : false;
 
@@ -79,22 +79,22 @@ export const App = () => {
     }
   };
 
-  const handleRegister = async (e) => { 
+  const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      if(email == '' || senha == '' ||  nickname == ''){
+      if (email == '' || senha == '' || nickname == '') {
         setMessage('');
-        setError(<p><strong>Usuário não pode ser nulo.</strong></p>);  
+        setError(<p><strong>Usuário não pode ser nulo.</strong></p>);
       } else {
-          await postUser(usuario);
-          setMessage(<p><strong>Sucesso! Agora logue para iniciar!</strong></p>); 
-          setError(null);
+        await postUser(usuario);
+        setMessage(<p><strong>Sucesso! Agora logue para iniciar!</strong></p>);
+        setError(null);
       }
-      
+
     } catch (error) {
       console.error('Erro ao registrar usuário:', error);
       setError('Erro ao registrar usuário. Tente novamente.');
-  }
+    }
   };
 
   const handleLogin = async (e) => {
@@ -112,22 +112,22 @@ export const App = () => {
   useEffect(() => {
     const introductionVideo = document.querySelector('.' + style.opening);
     const backgroundVideo = document.querySelector('.' + style.backGround);
-    
+
     introductionVideo.play();
-    
+
     introductionVideo.addEventListener('ended', () => {
       introductionVideo.classList.add(style.hidden);
-      backgroundVideo.style.opacity = 1; 
+      backgroundVideo.style.opacity = 1;
     });
 
     return () => {
-      introductionVideo.removeEventListener('ended', () => {});
+      introductionVideo.removeEventListener('ended', () => { });
     };
   }, []);
 
-  function QuemSomos() {
+  const handleQuemSomosClick = () => {
     navigate('../quemSomos');
-  }
+  };
 
   return (
     <>
@@ -141,15 +141,16 @@ export const App = () => {
               <div>
                 <li><p>A República</p></li>
                 <p className={style.paragrafo}>Ajude a desvendar um crime</p>
+                <p className={style.paragrafo}><a href="#" className={style.paragrafo} onClick={handleQuemSomosClick}>Quem somos?</a></p>
               </div>
             </ul>
             <label className={style.volumeLabel + ' animate__animated animate__fadeInRight animate__delay-5s'}>
               <img className="volume" src={volume} alt="icon Lupa" />
               <input type="range" min="0" max="1" step="0.01" onChange={setVolume} />
-            </label>  
+            </label>
           </nav>
-          
-          
+
+
           <div className={style.iconContainer + ' animate__animated animate__fadeInRight animate__delay-5s'}>
             <a href="#"><img className={style.iconAvatar} src={icone} alt="" onClick={() => setOpenForm(!openForm)} /></a>
           </div>

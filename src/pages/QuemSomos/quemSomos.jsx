@@ -8,27 +8,33 @@ import alexandre from "../../assets/quemSomos/desenvolvedores/icona.png";
 import bonafe from "../../assets/quemSomos/desenvolvedores/iconbo.png";
 import github from "../../assets/quemSomos/social/github.png";
 import linkedin from "../../assets/quemSomos/social/linkedin.png";
+import Voltar from "../../assets/IconVolta.png";
+import Button from '../../components/button';
 
 
 export const QuemSomos = () => {
   const navigate = useNavigate();
 
-  const App = () => navigate('../home');
+  const handleHome = () => {
+    navigate('../');
+  };
 
   return <div>
     <div className={style.mainContainer}>
       <video className={style.backgroundVideo} src={backgroundVideo} loop autoPlay muted></video>
+        <div className={style.containerIcon}>
+          <a href="#" onClick={handleHome}>
+            <img className={style.backIcon} src={Voltar} alt="icon back" />
+          </a>
+        </div>
       <div className={style.containerInterno}>
-      <div>
-          <button onClick={App}></button>
-      </div>
-      <div className={style.textoContainer}>
-        <h1>Conheça os desenvolvedores por trás de A República.</h1>
-      </div>
-      <div className={style.imagemContainer}>
-        <div className={style.devContainer}>
-          <img className={style.devIcon} src={alexandre} alt="alex" />
-          <div className={style.socialIcons}>
+        <div className={style.textoContainer}>
+          <h1>Conheça os desenvolvedores por trás de A República.</h1>
+        </div>
+        <div className={style.imagemContainer}>
+          <div className={style.devContainer}>
+            <img className={style.devIcon} src={alexandre} alt="alex" />
+            <div className={style.socialIcons}>
               <a href="https://www.linkedin.com/in/yuka" target="_blank" rel="noopener noreferrer">
                 <img className={style.socialIcon} src={linkedin} alt="LinkedIn" />
               </a>
@@ -37,12 +43,12 @@ export const QuemSomos = () => {
               </a>
             </div>
             <div className={style.nomeContainer}>
-            <p>Alexandre Silveira</p>
+              <p>Alexandre Silveira</p>
+            </div>
           </div>
-        </div>
-        <div className={style.devContainer}>
-          <img className={style.devIcon} src={yuka} alt="yuka" />
-          <div className={style.socialIcons}>
+          <div className={style.devContainer}>
+            <img className={style.devIcon} src={yuka} alt="yuka" />
+            <div className={style.socialIcons}>
               <a href="https://www.linkedin.com/in/yuka" target="_blank" rel="noopener noreferrer">
                 <img className={style.socialIcon} src={linkedin} alt="LinkedIn" />
               </a>
@@ -51,12 +57,12 @@ export const QuemSomos = () => {
               </a>
             </div>
             <div className={style.nomeContainer}>
-            <p>Ana Yukari</p>
+              <p>Ana Yukari</p>
+            </div>
           </div>
-        </div>
-        <div className={style.devContainer}>
-          <img className={style.devIcon} src={bianco} alt="bianco" />
-          <div className={style.socialIcons}>
+          <div className={style.devContainer}>
+            <img className={style.devIcon} src={bianco} alt="bianco" />
+            <div className={style.socialIcons}>
               <a href="https://www.linkedin.com/in/yuka" target="_blank" rel="noopener noreferrer">
                 <img className={style.socialIcon} src={linkedin} alt="LinkedIn" />
               </a>
@@ -65,12 +71,12 @@ export const QuemSomos = () => {
               </a>
             </div>
             <div className={style.nomeContainer}>
-            <p>Bianco Lorencini</p>
+              <p>Bianco Lorencini</p>
+            </div>
           </div>
-        </div>
-        <div className={style.devContainer}>
-          <img className={style.devIcon} src={bonafe} alt="bonafe" />
-          <div className={style.socialIcons}>
+          <div className={style.devContainer}>
+            <img className={style.devIcon} src={bonafe} alt="bonafe" />
+            <div className={style.socialIcons}>
               <a href="https://www.linkedin.com/in/lucas-bonafé-2b8041290/" target="_blank" rel="noopener noreferrer">
                 <img className={style.socialIcon} src={linkedin} alt="LinkedIn" />
               </a>
@@ -79,12 +85,12 @@ export const QuemSomos = () => {
               </a>
             </div>
             <div className={style.nomeContainer}>
-            <p>Lucas Bonafé</p>
+              <p>Lucas Bonafé</p>
+            </div>
           </div>
-        </div>
-        <div className={style.devContainer}>
-          <img className={style.devIcon} src={miguelito} alt="miguelito" />
-          <div className={style.socialIcons}>
+          <div className={style.devContainer}>
+            <img className={style.devIcon} src={miguelito} alt="miguelito" />
+            <div className={style.socialIcons}>
               <a href="https://www.linkedin.com/in/miguel-caldas-0359802a5/ " target="_blank" rel="noopener noreferrer">
                 <img className={style.socialIcon} src={linkedin} alt="LinkedIn" />
               </a>
@@ -93,8 +99,8 @@ export const QuemSomos = () => {
               </a>
             </div>
             <div className={style.nomeContainer}>
-            <p>Miguel Caldas</p>
-          </div>
+              <p>Miguel Caldas</p>
+            </div>
           </div>
         </div>
       </div>

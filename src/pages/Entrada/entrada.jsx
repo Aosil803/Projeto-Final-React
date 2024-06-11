@@ -191,7 +191,7 @@ export const Entrada = () => {
         </PopUpIntro>
 
         {/* ---intro03--- */}
-        <PopUpIntro  style={{position:"absolute", top: 420, right: 110, width: 340, height: 130}}
+        <PopUpIntro  style={{position:"absolute", top: 420, right: 110, width: 400, height: 140}}
         open={openPopup03}
         title=""
         >

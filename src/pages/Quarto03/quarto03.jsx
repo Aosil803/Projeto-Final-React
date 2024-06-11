@@ -94,7 +94,7 @@ export const QuartoYuka = () => {
       <p>Dentro dessa caixa você encontra um spray para ferimentos, gaze e ataduras cortadas.</p>
     </PopUp>
 
-    <PopUp  style={{position:"absolute", top: 190, right: 340, width: 300,}}
+    <PopUp  style={{position:"absolute", top: 200, right: 170, width: 250, height: 340}}
         open={openPopupGato}
         onClose={() => setOpenPopupGato(false)}
         title="Toquito"
@@ -104,7 +104,7 @@ export const QuartoYuka = () => {
     </PopUp>
 
     <PopUp  style={{position:"absolute", 
-        top: 160, right: 30, width: 200,}}
+        top: 200, right: 30, width: 200,}}
         open={openPopupSangue}
         onClose={() => setOpenPopupSangue(false)}
         title="Mancha de Sangue"
