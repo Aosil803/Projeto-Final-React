@@ -19,8 +19,8 @@
 .containerIcon{
   position: absolute;
   background: transparent;
-  bottom: 0;
-  left: 45%;
+  bottom: 1%;
+  left: 48.3%;
 }
 
 .homeIcon{
@@ -97,6 +97,41 @@
   bottom: 15%;
   left: 40%;
   color: white;
+}
+
+.contadorRegressivo{
+  position: absolute;
+  top: 0;
+  left: 46%;
+  display: flex;
+  background: white;
+  margin-top: 5px;
+  padding: 1%;
+  border-radius: 4px;
+}
+
+.contadorRegressivo img {
+  width: 16px;
+  height: 16px;
+  padding-right: 5px;
+}
+
+.contadorRegressivo{
+  position: absolute;
+  top: 0;
+  left: 46%;
+  width: 4.5%;
+  display: flex;
+  background: white;
+  margin-top: 5px;
+  padding: 1%;
+  border-radius: 4px;
+}
+
+.contadorRegressivo img {
+  width: 16px;
+  height: 16px;
+  padding-right: 5px;
 }
 
 

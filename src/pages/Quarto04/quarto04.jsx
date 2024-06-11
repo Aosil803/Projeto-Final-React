@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useContador } from '../../service/userContextTimer.jsx';
 import quarto04 from "../../assets/quartoLorencini.png"
 import style from "./quarto04.module.css"
 import home from "../../assets/home.gif"
@@ -11,7 +12,7 @@ import PopUp from '../../components/PopUp/popUp';
 import LorenSorrindo from '../../assets/dialogo/LorenSorrindo.png'
 import LorenTriste from '../../assets/dialogo/LorenTriste.png'
 import LorenDesconfiado from '../../assets/dialogo/LorenDesconfiado.png'
-
+import relogio from '../../assets/contagemTempo.gif'
 
 export const QuartoLorencini = () => {
 
@@ -22,10 +23,10 @@ export const QuartoLorencini = () => {
   const [showLorenSorrindo, setShowLorenSorrindo] = useState(false);
   const [showLorenTriste, setShowLorenTriste] = useState(false);
   const [showLorenDesconfiado, setShowLorenDesconfiado] = useState(false);
-
-
-
-
+  const { tempoTotal } = useContador();
+  const minutos = Math.floor(tempoTotal / 60);
+  const segundos = tempoTotal % 60;
+  
 
   useEffect(() => {
     let timer;
@@ -130,5 +131,16 @@ export const QuartoLorencini = () => {
           <p className={style.loren}>Ah, eu ia entregar isso ao Fred uns dias atrás, mas fiquei com medo porque ele e o Bonas estavam brigando muito, <br /> acho que rolou até porrada!</p>
         </div>
       )}
+
+<div className={style.contadorRegressivo}>
+        <img src={relogio} alt="" />
+        <div>
+          <span>{minutos.toString().padStart(2, "0")}</span>
+          <span>:</span>
+          <span>{segundos.toString().padStart(2, "0")}</span>
+        </div>
+      </div>
+
+
   </div>
 };

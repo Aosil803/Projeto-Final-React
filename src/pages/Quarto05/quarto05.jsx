@@ -1,18 +1,18 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useContador } from '../../service/userContextTimer.jsx';
 import quarto05 from "../../assets/quartoMiguelito.png"
 import style from "./quarto05.module.css"
 import home from "../../assets/home.gif"
 import sangue from "../../assets/quartoMiguel/sangue.png"
 import foice from "../../assets/quartoMiguel/foice.png"
 import crime from "../../assets/quartoMiguel/crime.png"
-import  Button from '../../components/button'
+import Button from '../../components/button'
 import PopUp from '../../components/PopUp/popUp.jsx'
 import MiguNormal from '../../assets/dialogo/MiguNormal.png'
 import MiguSerio from '../../assets/dialogo/MiguSerio.png'
 import MiguPreocupado from '../../assets/dialogo/MiguPreocupado.png'
-
-
+import relogio from '../../assets/contagemTempo.gif'
 
 
 export const QuartoMiguelito = () => {
@@ -23,7 +23,10 @@ export const QuartoMiguelito = () => {
   const [showMiguNormal, setShowMiguNormal] = useState(false);
   const [showMiguSerio, setShowMiguSerio] = useState(false);
   const [showMiguPreocupado, setShowMiguPreocupado] = useState(false);
-
+  const { tempoTotal } = useContador();
+  const minutos = Math.floor(tempoTotal / 60);
+  const segundos = tempoTotal % 60;
+  
 
   useEffect(() => {
     let timer;
@@ -60,14 +63,6 @@ export const QuartoMiguelito = () => {
     }
     return () => clearTimeout(timer);
   }, [openPopupEvidencia]);
-
-
-
-
-
-
-
-
 
   function Home() {
     navigate('../corredor');
@@ -137,6 +132,15 @@ export const QuartoMiguelito = () => {
           </p>
         </div>
       )}
+
+      <div className={style.contadorRegressivo}>
+        <img src={relogio} alt="" />
+        <div>
+          <span>{minutos.toString().padStart(2, "0")}</span>
+          <span>:</span>
+          <span>{segundos.toString().padStart(2, "0")}</span>
+        </div>
+      </div>
 
   </div>
 };

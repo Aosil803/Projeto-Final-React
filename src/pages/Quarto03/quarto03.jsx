@@ -11,8 +11,11 @@ import PopUp from '../../components/PopUp/popUp.jsx'
 import YukaNormal from '../../assets/dialogo/YukaNormal.png'
 import YukaSeria from '../../assets/dialogo/YukaNormal.png'
 import YukaMedo from '../../assets/dialogo/YukaMedo.png'
+import { useContador } from '../../service/userContextTimer.jsx';
+import relogio from '../../assets/contagemTempo.gif'
 
 export const QuartoYuka = () => {
+  const { tempoTotal } = useContador();
   const [openPopupCaixa ,setOpenPopupCaixa] = useState(false);
   const [openPopupGato ,setOpenPopupGato] = useState(false);
   const [openPopupSangue ,setOpenPopupSangue] = useState(false);
@@ -20,6 +23,8 @@ export const QuartoYuka = () => {
   const [showYukaSeria, setShowYukaSeria] = useState(false);
   const [showYukaMedo, setShowYukaMedo] = useState(false);
   const navigate = useNavigate();
+  const minutos = Math.floor(tempoTotal / 60);
+  const segundos = tempoTotal % 60;
 
   useEffect(() => {
     let timer;
@@ -130,6 +135,16 @@ export const QuartoYuka = () => {
           <p className={style.yukaTexto}><strong>Está desconfiando de mim por acaso?!</strong></p>
         </div>
       )}
+      
+      <div className={style.contadorRegressivo}>
+        <img src={relogio} alt="" />
+        <div>
+          <span>{minutos.toString().padStart(2, "0")}</span>
+          <span>:</span>
+          <span>{segundos.toString().padStart(2, "0")}</span>
+        </div>
+      </div>
+
 
   </div>
 };
