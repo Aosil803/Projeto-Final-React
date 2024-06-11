@@ -201,6 +201,7 @@
   height: 21%;
   left: 50%;
   top: 75%;
+  z-index: 9;
 }
 
 .tituloAcusacao {

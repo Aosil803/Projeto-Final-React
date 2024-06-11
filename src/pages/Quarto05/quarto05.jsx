@@ -7,7 +7,7 @@ import home from "../../assets/home.gif"
 import sangue from "../../assets/quartoMiguel/sangue.png"
 import foice from "../../assets/quartoMiguel/foice.png"
 import crime from "../../assets/quartoMiguel/crime.png"
-import  Button from '../../components/button'
+import Button from '../../components/button'
 import PopUp from '../../components/PopUp/popUp.jsx'
 import MiguNormal from '../../assets/dialogo/MiguNormal.png'
 import MiguSerio from '../../assets/dialogo/MiguSerio.png'
@@ -133,7 +133,7 @@ export const QuartoMiguelito = () => {
         </div>
       )}
 
-<div className={style.contadorRegressivo}>
+      <div className={style.contadorRegressivo}>
         <img src={relogio} alt="" />
         <div>
           <span>{minutos.toString().padStart(2, "0")}</span>

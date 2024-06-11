@@ -28,9 +28,6 @@ export const QuartoLorencini = () => {
   const segundos = tempoTotal % 60;
   
 
-
-
-
   useEffect(() => {
     let timer;
     if (openPopupComputador) {

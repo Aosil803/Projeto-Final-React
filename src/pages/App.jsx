@@ -2,13 +2,13 @@ import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { postUser, getUser } from '../service/usePost';
 import { UserProvider } from '../service/userContext';
+import { UserContext } from '../service/userContext.jsx';
 import style from './style.module.css';
 import opening from '../assets/republicaLogo.mp4';
 import backGround from '../assets/menuInicial.mp4';
 import icone from '../assets/avatar.gif';
-import { UserContext } from '../service/userContext.jsx';
 
-function App() {
+export const App = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [nickname, setNickname] = useState("");
@@ -31,7 +31,7 @@ function App() {
       const usuarios = response.data;
       const usuario = usuarios.find((usuario) => usuario.email === email && usuario.senha === senha);
 
-      console.log("Usuário encontrado: ", usuario); // log para depuração
+      console.log("Usuário encontrado: ", usuario); 
 
       return usuario ? true : false;
 
@@ -70,24 +70,24 @@ function App() {
     const backgroundVideo = document.querySelector('.' + style.backGround);
     
     introductionVideo.play();
-  
+    
     introductionVideo.addEventListener('ended', () => {
       introductionVideo.classList.add(style.hidden);
       backgroundVideo.style.opacity = 1; 
     });
-  
+
     return () => {
       introductionVideo.removeEventListener('ended', () => {});
     };
   }, []);
 
-  const Entrada = () => {
-    navigate('../entrada');
-  };
+  function QuemSomos() {
+    navigate('../quemSomos');
+  }
 
   return (
     <>
-     <UserProvider>
+    <UserProvider>
       <div className={style.mainContainer}>
         <video className={style.opening} src={opening} autoPlay muted><span className={style.span01}></span></video>
         <span className={style.span01}></span>
@@ -98,6 +98,7 @@ function App() {
               <li><p>A República</p></li>
               <p className={style.paragrafo}>Ajude a desvendar um crime</p>
             </div>
+            <li className={style.quemSomos}><a href='#' onClick={QuemSomos}></a></li>
           </ul>
         </nav>
         <div className={style.iconContainer + ' animate__animated animate__fadeInRight animate__delay-5s'}>

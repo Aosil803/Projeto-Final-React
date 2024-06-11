@@ -12,8 +12,6 @@ import carro from '../../assets/carro.gif';
 import Button from '../../components/button.jsx';
 import alexCorredor from '../../assets/dialogo/AlexNormal.png';
 import relogio from '../../assets/contagemTempo.gif'
-
-
 import bonasAcusacao from '../../assets/IconesAcusacao/BonasAcusacao.png';
 import alexAcusacao from '../../assets/IconesAcusacao/AlexAcusacao.png';
 import lorenAcusacao from '../../assets/IconesAcusacao/LorenciniAcusacao.png';
@@ -58,7 +56,7 @@ export const Corredor = () => {
   const mostraConselho = async () => {
     try {
       const conselho = await getConselhoById();
-      toast.success(conselho.data.slip.advice);
+      toast.warning(conselho.data.slip.advice);
     } catch (error) {
       console.error(error);
     }
@@ -101,8 +99,7 @@ export const Corredor = () => {
           <span>{segundos.toString().padStart(2, "0")}</span>
         </div>
       </div>
-
-
+      
       {openAcusacao && (
           <div className={style.popUpAcusacao}>
             <p className={style.tituloAcusacao}>

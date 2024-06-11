@@ -43,7 +43,7 @@ export const Entrada = () => {
       }, 2500);
 
       return () => clearTimeout(closeTimer);
-    }, 4200);
+    }, 4000);
 
     return () => clearTimeout(openTimer);
   }, []);
@@ -201,65 +201,39 @@ export const Entrada = () => {
         </PopUpIntro>
 
 
-    {/* ---inicio da intro--- */}
-    <PopUpIntro style={{ position: "absolute", top: 150, left: 260, width: 400, height: 50 }}
-      open={openPopup01}
-      title=""
-    >
-      <p className={style.intro}>Olá detetive <strong>{user}</strong>, bem vindo(a) a república... </p>
-    </PopUpIntro>
 
-    {/* ---intro02--- */}
-    <PopUpIntro style={{ position: "absolute", top: 250, right: 260, width: 400, height: 120 }}
-      open={openPopup02}
-      title=""
-    >
-      <p className={style.intro}>Você foi contratado para investigar o assassinato de Frederico Sheremetieff. O corpo foi encontrado hoje às 06:45 por uma moradora local. A área está isolada e os suspeitos estão dentro da casa.</p>
-    </PopUpIntro>
-
-    {/* ---intro03--- */}
-    <PopUpIntro style={{ position: "absolute", top: 420, right: 110, width: 400, height: 140 }}
-      open={openPopup03}
-      title=""
-    >
-      <p className={style.intro03}>Sabe o que é engraçado? Todos os suspeitos não gostavam nem um pouco da vítima...
-        Mas enfim, vamos ao que interessa!
-        Você tem total liberdade para explorar a casa, os suspeitos já estão cientes disso, porém, gostaria de introduzi-los a você antes.</p>
-    </PopUpIntro>
-
-
-    {/* ---BonasIntro--- */}
-    <PopUpIntro style={{ position: "absolute", top: 100, left: 710, width: 540, height: 140 }}
-      open={openPopup04}
-      title="Bonas"
-    >
+      {/* ---BonasIntro--- */}
+        <PopUpIntro style={{ position: "absolute", top: 100, left: 710, width: 540, height: 140 }}
+        open={openPopup04}
+        title="Bonas"
+      >
       <p className={style.intro03}> - Bonas - <br />
       Bonas é um homem adulto, irritado,e muito ocupado com o trabalho. Após investigações, descobrimos que ele e a vítima tinham frequentes brigas, incluindo incidentes de agressão física documentados em boletins de ocorrência.
       </p>
-    </PopUpIntro>
-    {openPopup04 && <img className={style.imgPersonagens} src={introBonas} alt="" />}
+      </PopUpIntro>
+      {openPopup04 && <img className={style.imgPersonagens} src={introBonas} alt="" />}
 
-    {/* ---AlexIntro--- */}
-    <PopUpIntro style={{ position: "absolute", top: 100, left: 710, width: 540, height: 140 }}
-      open={openPopup05}
-      title="Alex"
-    >
+      {/* ---AlexIntro--- */}
+      <PopUpIntro style={{ position: "absolute", top: 100, left: 710, width: 540, height: 140 }}
+        open={openPopup05}
+        title="Alex"
+      >
       <p className={style.intro03}> - Alex - <br />
       Alex é o dono da república. Avarento e rabugento. Ele e Fred, a vítima, brigavam constantemente pela posse do terreno, criando um clima de tensão permanente na república.
       </p>
-    </PopUpIntro>
-    {openPopup05 && <img className={style.imgPersonagens} src={introAlex} alt="" />}
+      </PopUpIntro>
+      {openPopup05 && <img className={style.imgPersonagens} src={introAlex} alt="" />}
 
 
-    {/* ---LorenciniIntro--- */}
-    <PopUpIntro style={{ position: "absolute", top: 100, left: 710, width: 540, height: 140 }}
+      {/* ---LorenciniIntro--- */}
+      <PopUpIntro style={{ position: "absolute", top: 100, left: 710, width: 540, height: 140 }}
       open={openPopup06}
       title="Lorencini"
-    >
+      >
       <p className={style.intro03}> - Lorencini - <br />
       Lorencini é um nerd estudioso e viciado em computador. Encontramos evidências em seu quarto que sugerem que ele era intimidado pela vítima. Além disso, ele já ganhou alguns prêmios em jogos de estratégia.
       </p>
-    </PopUpIntro>
+      </PopUpIntro>
     {openPopup06 && <img className={style.imgPersonagens} src={introLorencini} alt="" />}
 
     {/* ---MiguelitoIntro--- */}
