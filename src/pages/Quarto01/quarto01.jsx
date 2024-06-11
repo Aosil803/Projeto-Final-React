@@ -105,7 +105,7 @@ export const QuartoAlex = () => {
       <p>Há uma Ação Judicial dentro dela. Tem o nome Fred e Alex no documento.</p>
     </PopUp>
 
-    <PopUp  style={{position:"absolute", top: 160, right: 160, width: 200, height: 270,}}
+    <PopUp  style={{position:"absolute", top: 170, right: 160, width: 220, height: 290,}}
         open={openPopupChave}
         onClose={() => setOpenPopupChave(false)}
         title="Chave"
