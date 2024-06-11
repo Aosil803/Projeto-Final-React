@@ -18,7 +18,6 @@ import lorenAcusacao from '../../assets/IconesAcusacao/LorenciniAcusacao.png';
 import miguelitoAcusacao from '../../assets/IconesAcusacao/MiguelitoAcusacao.png';
 import yukaAcusacao from '../../assets/IconesAcusacao/YukaAcusacao.png';
 
-
 export const Corredor = () => {
   const [openAcusacao, setOpenAcusacao] = useState(false);
   const { user } = useContext(UserContext);
@@ -27,7 +26,6 @@ export const Corredor = () => {
   const minutos = Math.floor(tempoTotal / 60);
   const segundos = tempoTotal % 60;
 
-  
   const [mostrarApresentacao, setMostrarApresentacao] = useState(() => {
     const valorArmazenado = localStorage.getItem('mostrarApresentacaoCorredor');
     return valorArmazenado === null ? true : JSON.parse(valorArmazenado);
@@ -52,6 +50,8 @@ export const Corredor = () => {
   const PortaLorencini = () => navigate('../quartoLorencini');
 
   const Home = () => navigate('../corredor');
+  const Prisao = () => navigate('../finalPrisao');
+  const GameOver = () => navigate('../finalGameOver'); // depois mudar na main no path
 
   const mostraConselho = async () => {
     try {
@@ -63,7 +63,6 @@ export const Corredor = () => {
   };
 
   return (
-    
     <div>
       <div>
         <img className={style.corredor} src={corredor} alt="corredor de uma casa" />
@@ -107,20 +106,20 @@ export const Corredor = () => {
               Quem foi o assassino?
             </p>
             <div className={style.containerImgAcusacao}>
-              <a href="#" onClick={Home}>
-              <img src={bonasAcusacao} className={style.imgAcusacao} />
+              <a href="#" onClick={GameOver}>
+                <img src={bonasAcusacao} className={style.imgAcusacao} />
               </a>
-              <a href="#" onClick={Home}>
-              <img src={alexAcusacao} className={style.imgAcusacao} />
+              <a href="#" onClick={GameOver}>
+                <img src={alexAcusacao} className={style.imgAcusacao} />
               </a>
-              <a href="#" onClick={Home}>
-              <img src={lorenAcusacao} className={style.imgAcusacao} />
+              <a href="#" onClick={GameOver}>
+                <img src={lorenAcusacao} className={style.imgAcusacao} />
               </a>
-              <a href="#" onClick={Home}>
-              <img src={miguelitoAcusacao} className={style.imgAcusacao} />
+              <a href="#" onClick={Prisao}>
+                <img src={miguelitoAcusacao} className={style.imgAcusacao}/> 
               </a>
-              <a href="#" onClick={Home}>
-              <img src={yukaAcusacao} className={style.imgAcusacao} />
+              <a href="#" onClick={GameOver}>
+                <img src={yukaAcusacao} className={style.imgAcusacao} />
               </a>
             </div>
           </div>

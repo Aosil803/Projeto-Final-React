@@ -6,7 +6,7 @@ const ContadorContext = createContext();
 
 // Provedor do Contexto
 export const ContadorProvider = ({ children }) => {
-  const [tempoTotal, setTempoTotal] = useState(5 * 60);
+  const [tempoTotal, setTempoTotal] = useState(10 * 60);
 
   useEffect(() => {
     let timer;

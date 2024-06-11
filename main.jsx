@@ -19,6 +19,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { UserProvider } from './src/service/userContext.jsx'
 import { ContadorProvider } from './src/service/userContextTimer.jsx';
 import { QuemSomos } from './src/pages/QuemSomos/quemSomos.jsx'
+import { FinalPrisao } from './src/pages/Final/finalPrisao.jsx';
+import { FinalGameOver } from './src/pages/Final/finalGameOver.jsx';
 
 const router = createBrowserRouter([
   {
@@ -69,6 +71,16 @@ const router = createBrowserRouter([
   {
     path: '/quemSomos',
     element: <QuemSomos />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/finalPrisao',
+    element: <FinalPrisao />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/finalGameOver',
+    element: <FinalGameOver />,
     errorElement: <ErrorPage />
   }
 ]);

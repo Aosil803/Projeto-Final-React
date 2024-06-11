@@ -106,8 +106,7 @@ export const FinalGameOver = () =>{
                     <p className={style.intro}>Você é um pessimo detetive <strong>{ user }</strong>!!</p>
                     </PopUpIntro>
                 </div>
-            </div>
-            
+            </div> 
         </div>
     );
 
